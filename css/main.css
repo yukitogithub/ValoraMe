@@ -17,3 +17,11 @@
 .lobster-font {
 	font-family: 'Lobster', cursive;
 }
+
+.panel-fixed-size {
+	height: 300px;
+}
+
+.panel-fixed-size > .panel-footer {
+	top: 250px;
+}

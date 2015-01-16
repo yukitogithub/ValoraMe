@@ -1,0 +1,805 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"sl",
+				"slideDown"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"ar",
+				"artists"
+			],
+			[
+				"i",
+				"itemId"
+			],
+			[
+				"art",
+				"artistControllers"
+			],
+			[
+				"my",
+				"myNameSpace"
+			],
+			[
+				"an",
+				"angularDemo"
+			],
+			[
+				"get",
+				"getCustomers"
+			],
+			[
+				"s",
+				"scope"
+			],
+			[
+				"vie",
+				"View2"
+			],
+			[
+				"bor-r",
+				"border-radius"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"margin-t",
+				"margin-left"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"li",
+				"libs"
+			],
+			[
+				"a",
+				"ampliacion"
+			],
+			[
+				"img",
+				"imgData"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"c",
+				"css"
+			],
+			[
+				"achic",
+				"achicarCss"
+			],
+			[
+				"agr",
+				"agrandarCss"
+			],
+			[
+				"w",
+				"widthInt"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"bor",
+				"border-collapse"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"border",
+				"border-color"
+			],
+			[
+				"formul",
+				"formularioMostrar"
+			],
+			[
+				"border-s",
+				"border-style"
+			],
+			[
+				"t",
+				"titulo"
+			],
+			[
+				"V",
+				"ViewForm"
+			],
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"B",
+				"Backbone"
+			],
+			[
+				"in",
+				"indiceActual"
+			],
+			[
+				"col",
+				"collection"
+			],
+			[
+				"te",
+				"temaSpan"
+			],
+			[
+				"The",
+				"Theater"
+			],
+			[
+				"View",
+				"ViewLibro"
+			],
+			[
+				"user",
+				"user"
+			],
+			[
+				"d",
+				"displayView"
+			],
+			[
+				"fo",
+				"formView"
+			],
+			[
+				"guardar",
+				"guardar"
+			],
+			[
+				"last",
+				"last_name"
+			],
+			[
+				"e",
+				"ejemplo1"
+			],
+			[
+				"redR",
+				"redRoseMessage"
+			],
+			[
+				"ra",
+				"rainbowRoseMessage"
+			],
+			[
+				"heir",
+				"heirloomRoseMessage"
+			],
+			[
+				"no",
+				"noCopy"
+			],
+			[
+				"flowerG",
+				"flowerGroupView"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"fl",
+				"FlowersCollection"
+			],
+			[
+				"f",
+				"flowerGroup"
+			],
+			[
+				"rain",
+				"rainbowRoses"
+			],
+			[
+				"rai",
+				"rainbowRoses"
+			],
+			[
+				"he",
+				"heirloomRoses"
+			],
+			[
+				"va",
+				"vaciarInputs"
+			],
+			[
+				"re",
+				"registro"
+			],
+			[
+				"reg",
+				"Registro"
+			],
+			[
+				"List",
+				"ListView"
+			],
+			[
+				"app",
+				"append"
+			],
+			[
+				"append",
+				"appendItem"
+			],
+			[
+				"add",
+				"addItem"
+			],
+			[
+				"j",
+				"javascript"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"td",
+				"tdYear"
+			],
+			[
+				"tex",
+				"text"
+			],
+			[
+				"bottom",
+				"border-bottom"
+			],
+			[
+				"bo",
+				"border-style"
+			],
+			[
+				"ta",
+				"tabla"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"co",
+				"correctamente"
+			],
+			[
+				"fu",
+				"funciona"
+			],
+			[
+				"pro",
+				"probarPersonaFisicaVacia"
+			],
+			[
+				"Per",
+				"PersonaJuridica"
+			],
+			[
+				"Persona",
+				"personaFisica"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"S",
+				"sans-serif"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"ca",
+				"cargando"
+			],
+			[
+				"tem",
+				"temp_min"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"lat",
+				"latitud"
+			],
+			[
+				"lo",
+				"longitud"
+			],
+			[
+				"map",
+				"mapOptions"
+			],
+			[
+				"ma",
+				"maps"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"form",
+				"formatted_address"
+			],
+			[
+				"cre",
+				"crearButtonCalc"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"fn",
+				"function"
+			],
+			[
+				"row",
+				"rowHeader"
+			],
+			[
+				"r",
+				"row"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"wid",
+				"width"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 180.0,
+		"selected_items":
+		[
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"wrap",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"wra",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"emmet wra",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"snipp",
+				"Snippet: html"
+			],
+			[
+				"htm",
+				"Snippet: html"
+			],
+			[
+				"lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"packac",
+				"Package Control: Install Package"
+			],
+			[
+				"new",
+				"File: New View into File"
+			],
+			[
+				"commen",
+				"Toggle Comment"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Archivos Escritorio/Projects/ValoraMe/README.md",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Projects/ValoraMe/css/main.css",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Archivos Escritorio/Projects/ValoraMe/partials/portada.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Archivos Escritorio/Projects/ValoraMe/index.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Projects/ValoraMe/js/controllers.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Projects/ValoraMe/js/app.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Projects/ValoraMe/Index.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/tutorial/angular-phonecat/app/js/app.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/tutorial/angular-phonecat/app/index.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/tutorial/angular-phonecat/.bowerrc",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/tutorial/angular-phonecat/bower.json",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/tutorial/angular-phonecat/app/js/services.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/tutorial/angular-phonecat/app/js/controllers.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/tutorial/angular-phonecat/app/partials/phone-detail.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/tutorial/angular-phonecat/app/phones/phones.json",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/tutorial/angular-phonecat/test/unit/controllersSpec.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Actividades JQ German Schacht/07 Ajax Weather JQ/acordeonImg.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Actividades JQ German Schacht/07 Ajax Weather JQ/acordeonImg.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/tutorial/angular-phonecat/node_modules/bower/README.md",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/codeschool/index.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Archivos Escritorio/angularJs/tutorial/angular-phonecat/bower.json",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/codeschool/js/app.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/tutorial/angular-phonecat/node_modules/bower/bin/bower",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/Lynda/Tutorials/video 01 01/js/app.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/Lynda/Tutorials/video 01 01/partials/details.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/Lynda/Tutorials/video 01 01/css/style.css",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/Lynda/Tutorials/video 01 01/partials/list.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/Lynda/Tutorials/video 01 01/index.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/Lynda/Tutorials/video 01 01/js/controllers.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/Lynda/Tutorials/video 01 01/js/data.json",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/Lynda/Exercise Files/02_01/finished/angular/js/controllers.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/Lynda/Exercise Files/02_01/start/angular/js/controllers.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/Lynda/Exercise Files/01_02/finished/angular/lib/angular/angular.min.js",
+		"/home/likewise-open/GLOBANT/german.schacht/.local/share/applications/alacarte-made.desktop",
+		"/home/likewise-open/GLOBANT/german.schacht/.local/share/applications/google-chrome.desktop",
+		"/home/likewise-open/GLOBANT/german.schacht/.local/share/applications/mimeapps.list",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/src/angular1.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/src/Partials/View2.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/src/Partials/View1.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/src/js/demoApp.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/the new pixelTable/css/pixelTable.css",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/the new pixelTable/js/myLibs/site.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/the new pixelTable/js/myLibs/saveImg.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/the new pixelTable/js/myLibs/ger.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/the new pixelTable/js/myLibs/fer.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/the new pixelTable/pixelTable.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/the new pixelTable/img/back.png",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/the new pixelTable/img/cont.png",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/angularJs/src/js/simpleController.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/the new pixelTable/js/libs/imageConverter.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/entrega/js/table.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Untitled htmlbasico.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/pixelTable/pixelTable.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/pixelTable/css/pixelTable.css",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/pixelTable/js/myLibs/site.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/pixelTable/js/myLibs/ger.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/angular.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Tabla Color/js/tablacolor.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Tabla Color/tablacolor.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Tabla Color/css/tablacolor.css",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Biblioteca/src/js/biblioteca.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Biblioteca/src/data/libros.json",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Biblioteca/src/css/biblioteca.css",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Biblioteca/src/biblioteca.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/mario.css",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/mario.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Archivos Escritorio WEBUI/Actividades JQ German Schacht/07 Ajax Weather JQ/acordeonImg.css",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Proyecto Final Backbone/Version 1/asignacion01.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/libros.json",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/referencia/ej7/src/js/data/movies.json",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Proyecto Final Backbone/Biblioteca/src/data/libros.json",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Proyecto Final Backbone/Biblioteca/src/biblioteca.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Proyecto Final Backbone/Biblioteca/src/js/biblioteca.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/referencia/ej7/src/js/main.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Actividades JQ German Schacht/08 Ajax Libros JQ/libros.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/Actividades JQ German Schacht/08 Ajax Libros JQ/libros.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/TODO/Backbone.js Todos_files/todos.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/backbone/src/ejemplo4.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/backbone/src/js/ejemplo4.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/TODO/Backbone.js Todos_files/backbone.localStorage.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/referencia/ej7/src/js/libs/underscore.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/referencia/ej7/src/js/libs/backbone.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Desktop/TODO/Backbone.js Todos.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Proyecto Final Backbone/Version 1/reservasPuestos/main/js/libs/backbone-min.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/backbone/src/js/libs/backbone.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/01/01-03/js/flowerApp.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/04/04-03/finished/js/flowerApp.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/backbone/src/ejemplo3.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Tuto VersionOne/css/index.css",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Tuto VersionOne/js/index.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Tuto VersionOne/index.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Tuto VersionOne/js/libs/backbone-forms.min.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/backbone/src/ejemplo1.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/backbone/src/ejemplo2.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/backbone/src/js/ejemplo2.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/01/01-03/js/models/singleFlowerModel.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/backbone/src/js/ejemplo1.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/prototype/src/js/tres.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/prototype/src/js/dos.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/prototype/src/js/cuatro.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/prototype/src/js/uno.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/04/04-03/start/js/routes/router.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/04/04-02/start/js/flowerApp.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/04/04-02/start/js/routes/router.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/04/04-01/start/js/views/singleFlowerView.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/04/04-01/finished/js/views/singleFlowerView.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Downloads/prototype/src/tres.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/03/03-01/js/flowerApp.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/03/03-01/js/models/singleFlowerModel.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/03/03-01/js/views/singleFlowerView.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/03/03-06/index.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/03/03-01/js/views/allFlowersView.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/03/03-01/index.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Proyecto Final Backbone/Version 1/reservasPuestos/main/js/models/persona.js",
+		"/home/likewise-open/GLOBANT/german.schacht/.config/sublime-text-3/Packages/User/JavaScript.sublime-settings",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Clase 18/tabla2.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Clase 18/agenda.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Clase 18/tabla2.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Clase 18/agenda.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/01/01-03/index.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Backbone tutorial/Exercise Files/01/01-03/js/collections/allFlowers.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Clase 9/formulario persona.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Proyecto Final Backbone/Version 1/reservasPuestos/README.md",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Clase 18/tabla.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Clase 18/tabla.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Proyecto Final Backbone/Version 1/index.html",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Clase 8/clase 8 -2.js",
+		"/home/likewise-open/GLOBANT/german.schacht/Documents/WEBUI/Proyecto Final Backbone/Version 1/reservasPuestos/docs/Ayuda de Backbone"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"enter",
+			"prev",
+			"myApp",
+			"myNameSpace",
+			"customers",
+			"cust",
+			"jquery",
+			";\n",
+			"tema",
+			"ano",
+			"titulo",
+			"año",
+			"autor",
+			"first",
+			"first_name",
+			".\n",
+			"Text",
+			"Nombre",
+			"();\n",
+			"library",
+			"Fisica",
+			"Juridica",
+			"Fisica",
+			"Fisico",
+			"Fisica",
+			"Location",
+			"abrirPagina",
+			">\n",
+			"lat",
+			"long_name",
+			"sindicato",
+			"i",
+			"            ",
+			"img",
+			"acordeonImg",
+			"Facebook",
+			"facebook",
+			"abierto"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Url",
+			"Year",
+			"Title"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "bootstrap.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 163.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
