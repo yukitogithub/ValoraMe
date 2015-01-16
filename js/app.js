@@ -12,7 +12,7 @@ valorame.config(['$routeProvider',
 		})
 		.when('/listado', {
 			templateUrl: 'partials/listado.html',
-			/*controller: 'PortadaController'*/
+			controller: 'ListadoController'
 		})
 		.otherwise({
 			redirectTo: '/index'
