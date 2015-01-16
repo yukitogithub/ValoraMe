@@ -9,3 +9,11 @@
 	text-align: center;
 	margin: 0px;
 }
+
+#jumbotron-principal button.btn {
+	text-shadow: none;
+}
+
+.lobster-font {
+	font-family: 'Lobster', cursive;
+}

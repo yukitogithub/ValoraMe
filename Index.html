@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script type="text/javascript" src="js/libs/jquery-2.1.3.min.js"></script>
@@ -20,12 +21,20 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="#" class="navbar-brand">ValoraMe</a>
+					<a href="#" class="navbar-brand lobster-font">ValoraMe</a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="valorame-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">USUARIO MASTODONTE</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">USUARIO MASTODONTE <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Ver Perfil</a></li>
+								<li><a href="#">Ajustes</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Cerrar Sesión</a></li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -35,8 +44,30 @@
 				<div class="container">
 					<h1>EL JUMBOTRON!</h1>
 					<p>Ingrese texto interesante aquí. Wiiii</p>
+					<p><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">Ingresar ></button></p>
 				</div>
 			</div>
+
+			<!-- De acá, les presento, el modal -->
+			<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="loginModalLabel">Iniciar Sesión</h4>
+						</div>
+						<div class="modal-body">
+							<p>ACA VA EL MINIFORM LOGIN!</p>
+							<p>OTRO RENGLÓN DEL MINIFORM</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+							<button type="button" class="btn btn-primary">Ingresar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</body>
 </html>
