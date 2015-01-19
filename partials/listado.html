@@ -2,7 +2,7 @@
 <br>
 <br>
 <div class="container">
-	<div class="col-md-3">
+	<div class="col-md-3" >
 		<div class="form-group">
 			<label for="votatedForm">Producto/Servicio</label>
 			<input class="form-control" id="votatedForm" type="text" ng-model="votated" placeholder="Producto/Servicio">
@@ -23,13 +23,15 @@
 			<label for="comentatorForm">Comentarista</label>
 			<input class="form-control" id="comentatorForm" type="text" ng-model="comentator" placeholder="Comentarista">
 		</div>
-		
+		<div class="form-group">
+			<button type="submit" class="btn btn-warning btn-block">Comentar</button>
+		</div>
 	</div>
 	<div class="col-md-9">
 		<h1>Comentarios</h1>
 
 		<!-- Muestra en caso de que el input "votated" no esté vacío -->
-		<div ng-show="votated" class="col-md-6">
+		<div ng-show="votated || stars || comment" class="col-md-6">
 			<div class="panel panel-danger">
 				<div class="panel-heading">
 					<h3 class="panel-title">Product/Service: {{votated}}</h3>
