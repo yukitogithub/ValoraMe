@@ -34,6 +34,31 @@
 		</div>
 	</div>
 	<div class="col-md-9">
+		<div class="search">
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanden="false">
+						Criteria: {{criteria}} <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a ng-click="criteria='Any'; search = {};">Any</a></li>
+						<li><a ng-click="criteria='Product/Service'; search = {};">Product/Service</a></li>
+						<li><a ng-click="criteria='Comment'; search = {};">Comment</a></li>
+						<li><a ng-click="criteria='Owner'; search = {};">Owner</a></li>		
+					</ul>
+				</div>
+				<input ng-show="criteria==='Any'" type="text" class="searchInput form-control" placeholder="Search..." ng-model="search.$">
+				<input ng-show="criteria==='Product/Service'" type="text" class="searchInput form-control" placeholder="Search..." ng-model="search.votated">
+				<input ng-show="criteria==='Comment'" type="text" class="searchInput form-control" placeholder="Search..." ng-model="search.comment">
+				<input ng-show="criteria==='Owner'" type="text" class="searchInput form-control" placeholder="Search..." ng-model="search.comentator">
+				<span class="input-group-btn">
+					<button class="btn btn-warning" type="button">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</span>
+			</div>
+		</div>
+
 		<div class="page-header">
 			<h1>Comentarios</h1>
 		</div>
@@ -54,7 +79,7 @@
 		</div>
 
 		<!-- Listado de comentarios en el arreglo -->
-		<div ng-repeat="item in data | orderBy:'-date'" class="col-md-6">
+		<div ng-repeat="item in data | filter:search | orderBy:'-date'" class="col-md-6">
 			<div class="panel panel-warning">
 				<div class="panel-heading">
 					<h3 class="panel-title"><strong>Product/Service: </strong>{{item.votated}}</h3>
