@@ -35,14 +35,14 @@
 		<div ng-show="votated || stars || comment" class="col-md-6">
 			<div class="panel panel-danger">
 				<div class="panel-heading">
-					<h3 class="panel-title">Product/Service: {{votated}}</h3>
+					<h3 class="panel-title"><strong>Product/Service: </strong>{{votated}}</h3>
 				</div>
 				<div class="panel-body panel-fixed-size">
-					<span>Stars: </span><meter value='{{stars}}' min=0 max=5>{{stars}}</meter>
-					<p>Comment: {{comment}}</p>
-					<span>Date: {{date}}</span>
+					<p><strong>Stars: </strong><meter value='{{stars}}' min=0 max=5>{{stars}}</meter></p>
+					<p><strong>Comment: </strong>{{comment}}</p>
+					<p><strong>Date: </strong>{{date}}</p>
 				</div>
-				<div class="panel-footer"><footer>Comentador: {{comentator}}</footer></div>
+				<div class="panel-footer"><footer><strong>Comentador: </strong>{{comentator}}</footer></div>
 			</div>
 		</div>
 
@@ -50,14 +50,14 @@
 		<div ng-repeat="item in data | orderBy:'-date'" class="col-md-6">
 			<div class="panel panel-warning">
 				<div class="panel-heading">
-					<h3 class="panel-title">Product/Service: {{item.votated}}</h3>
+					<h3 class="panel-title"><strong>Product/Service: </strong>{{item.votated}}</h3>
 				</div>
 				<div class="panel-body panel-fixed-size">
-					<span>Stars: </span><meter value='{{item.stars}}' min=0 max=5>{{item.stars}}</meter>
-					<p>Comment: {{item.comment}}</p>
-					<span>Date: {{item.date}}</span>
+					<p><strong>Stars: </strong><meter value='{{item.stars}}' min=0 max=5>{{item.stars}}</meter></p>
+					<p><strong>Comment: </strong>{{item.comment}}</p>
+					<p><strong>Date: </strong>{{item.date}}</p>
 				</div>
-				<div class="panel-footer"><footer>Comentador: {{item.comentator}}</footer></div>
+				<div class="panel-footer"><footer><strong>Comentador: </strong>{{item.comentator}}</footer></div>
 			</div>
 		</div>
 	</div>
