@@ -1,34 +1,35 @@
-<br>
-<br>
-<br>
-<div class="container">
+<div class="container container-margin">
 	<div class="col-md-3" >
-		<div class="form-group">
-			<label for="votatedForm">Producto/Servicio</label>
-			<input class="form-control" id="votatedForm" type="text" ng-model="votated" placeholder="Producto/Servicio">
-		</div>
-		<div class="form-group">
-			<label for="starsForm">Estrellas</label>
-			<input class="form-control" id="starsForm" type="number" min="0" max="5" ng-model="stars" placeholder="Estrellas">
-		</div>
-		<div class="form-group">
-			<label for="commentForm">Comentario</label>
-			<textarea class="form-control" name="comment" id="commentForm" cols="30" rows="5" ng-model="comment"></textarea>
-		</div>
-		<div class="form-group">
-			<label for="dateForm">Fecha</label>
-			<input class="form-control" id="dateForm" type="text" ng-model="date" placeholder="Fecha">
-		</div>
-		<div class="form-group">
-			<label for="comentatorForm">Comentarista</label>
-			<input class="form-control" id="comentatorForm" type="text" ng-model="comentator" placeholder="Comentarista">
-		</div>
-		<div class="form-group">
-			<button type="submit" class="btn btn-warning btn-block">Comentar</button>
-		</div>
+		<form name="comentarioForm">
+			<div class="form-group">
+				<label for="votatedForm">Producto/Servicio</label>
+				<input class="form-control" id="votatedForm" type="text" ng-model="votated" placeholder="Producto/Servicio" required>
+			</div>
+			<div class="form-group">
+				<label for="starsForm">Estrellas</label>
+				<input class="form-control" id="starsForm" type="number" min="0" max="5" ng-model="stars" placeholder="Estrellas" required>
+			</div>
+			<div class="form-group">
+				<label for="commentForm">Comentario</label>
+				<textarea class="form-control" name="comment" id="commentForm" cols="30" rows="5" ng-model="comment" required></textarea>
+			</div>
+			<div class="form-group">
+				<label for="dateForm">Fecha</label>
+				<input class="form-control" id="dateForm" type="text" ng-model="date" placeholder="Fecha" required>
+			</div>
+			<div class="form-group">
+				<label for="comentatorForm">Comentarista</label>
+				<input class="form-control" id="comentatorForm" type="text" ng-model="comentator" placeholder="Comentarista" required>
+			</div>
+			<div class="form-group">
+				<button ng-disabled="comentarioForm.$invalid" ng-click="agregarComentario()" class="btn btn-warning btn-block">Comentar</button>
+			</div>
+		</form>
 	</div>
 	<div class="col-md-9">
-		<h1>Comentarios</h1>
+		<div class="page-header">
+			<h1>Comentarios</h1>
+		</div>
 
 		<!-- Muestra en caso de que el input "votated" no esté vacío -->
 		<div ng-show="votated || stars || comment" class="col-md-6">

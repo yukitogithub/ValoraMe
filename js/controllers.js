@@ -47,5 +47,24 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 	 	'date': '2015-01-10',
 	 	'comentator': 'Pepsi co'
 	}
-	]
+	];
+
+	$scope.agregarComentario = function() {
+		var nuevoComentario = {
+			'votated' : $scope.votated,
+			'comment' : $scope.comment,
+			'stars' : $scope.stars,
+			'date' : $scope.date,
+			'comentator' : $scope.comentator,
+		};
+
+		$scope.data.push(nuevoComentario);
+
+		$scope.votated = '';
+		$scope.comment = '';
+		$scope.stars = '';
+		$scope.date = '';
+		$scope.comentator = '';
+	}
+
 }]);
