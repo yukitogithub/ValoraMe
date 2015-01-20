@@ -8,7 +8,15 @@
 				<form name="comentarioForm">
 					<div class="form-group">
 						<label for="votatedForm">Producto/Servicio</label>
-						<input class="form-control" id="votatedForm" type="text" ng-model="votated" placeholder="Producto/Servicio" required>
+						<input name="votated" class="form-control" id="votatedForm" type="text" ng-change="select=false;" ng-model="votated" placeholder="Producto/Servicio" required>
+					</div>
+					<div id="listita" ng-show="votated && !select" >
+						<!--<select ng-model="votatedSelect" ng-options="result.votated for result in data | filter: votated">
+							<option value="">Selecciona uno...</option>
+						</select>-->
+						<ul class="list-group list-fixed" >
+							<a href="" ng-repeat="item in data | filter:votated" ng-click="selected();" class="list-group-item" >{{item.votated}}</a>
+						</ul>
 					</div>
 					<div class="form-group">
 						<label for="starsForm">Estrellas</label>

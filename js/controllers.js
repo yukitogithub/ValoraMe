@@ -76,4 +76,10 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 		$scope.date = '';
 		$scope.comentator = '';
 	}
+
+	$scope.select = false;
+	$scope.selected = function(){
+		$scope.votated = $(this)[0].item.votated;
+		$scope.select = true;
+ 	}
 }]);
