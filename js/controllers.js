@@ -68,4 +68,12 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 	};
 
 	$scope.criteria = "Any";
+
+	$scope.limpiarComentario = function() {
+		$scope.votated = '';
+		$scope.comment = '';
+		$scope.stars = '';
+		$scope.date = '';
+		$scope.comentator = '';
+	}
 }]);

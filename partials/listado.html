@@ -12,11 +12,20 @@
 					</div>
 					<div class="form-group">
 						<label for="starsForm">Estrellas</label>
-						<input class="form-control" id="starsForm" type="number" min="0" max="5" ng-model="stars" placeholder="Estrellas" required>
+						<!--input class="form-control" id="starsForm" type="number" min="0" max="5" ng-model="stars" placeholder="Estrellas" required-->
+						<div class="text-center">
+							<span class="star-rating">
+							  <input type="radio" name="starForm" value="1" ng-model="stars"><i></i>
+							  <input type="radio" name="starForm" value="2" ng-model="stars"><i></i>
+							  <input type="radio" name="starForm" value="3" ng-model="stars"><i></i>
+							  <input type="radio" name="starForm" value="4" ng-model="stars"><i></i>
+							  <input type="radio" name="starForm" value="5" ng-model="stars"><i></i>
+							</span>
+						</div>
 					</div>
 					<div class="form-group">
 						<label for="commentForm">Comentario</label>
-						<textarea class="form-control" name="comment" id="commentForm" cols="30" rows="5" ng-model="comment" required></textarea>
+						<textarea class="form-control" name="comment" id="commentForm" cols="30" rows="4" ng-model="comment" required></textarea>
 					</div>
 					<div class="form-group">
 						<label for="dateForm">Fecha</label>
@@ -30,6 +39,9 @@
 						<button ng-disabled="comentarioForm.$invalid" ng-click="agregarComentario()" class="btn btn-warning btn-block">Comentar</button>
 					</div>
 				</form>
+				<div class="form-group">
+					<button ng-click="limpiarComentario()" class="btn btn-default btn-block">Limpiar Campos</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -70,7 +82,15 @@
 					<h3 class="panel-title"><strong>Product/Service: </strong>{{votated}}</h3>
 				</div>
 				<div class="panel-body panel-fixed-size">
-					<p><strong>Stars: </strong><meter value='{{stars}}' min=0 max=5>{{stars}}</meter></p>
+					<p>
+						<span class="star-rating">
+							<input type="radio" name="panelForm" value="1" ng-model="stars" disabled="disabled"><i></i>
+							<input type="radio" name="panelForm" value="2" ng-model="stars" disabled="disabled"><i></i>
+							<input type="radio" name="panelForm" value="3" ng-model="stars" disabled="disabled"><i></i>
+							<input type="radio" name="panelForm" value="4" ng-model="stars" disabled="disabled"><i></i>
+							<input type="radio" name="panelForm" value="5" ng-model="stars" disabled="disabled"><i></i>
+						</span> <strong>{{stars}}</strong>
+					</p>
 					<p><strong>Comment: </strong>{{comment}}</p>
 					<p><strong>Date: </strong>{{date}}</p>
 				</div>
@@ -85,7 +105,15 @@
 					<h3 class="panel-title"><strong>Product/Service: </strong>{{item.votated}}</h3>
 				</div>
 				<div class="panel-body panel-fixed-size">
-					<p><strong>Stars: </strong><meter value='{{item.stars}}' min=0 max=5>{{item.stars}}</meter></p>
+					<p>
+						<span class="star-rating">
+							<input type="radio" name="{{index}}" value="1" ng-model="item.stars" disabled="disabled"><i></i>
+							<input type="radio" name="{{index}}" value="2" ng-model="item.stars" disabled="disabled"><i></i>
+							<input type="radio" name="{{index}}" value="3" ng-model="item.stars" disabled="disabled"><i></i>
+							<input type="radio" name="{{index}}" value="4" ng-model="item.stars" disabled="disabled"><i></i>
+							<input type="radio" name="{{index}}" value="5" ng-model="item.stars" disabled="disabled"><i></i>
+						</span> <strong>{{item.stars}}</strong>
+					</p>
 					<p><strong>Comment: </strong>{{item.comment}}</p>
 					<p><strong>Date: </strong>{{item.date}}</p>
 				</div>

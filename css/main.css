@@ -1,3 +1,7 @@
+body {
+	background: url(../img/grey.png);
+}
+
 #jumbotron-principal {
 	height: 100vh;
 	background: url(../img/jumbo.jpg);
