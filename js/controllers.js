@@ -82,4 +82,9 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 		$scope.votated = $(this)[0].item.votated;
 		$scope.select = true;
  	}
+
+ 	$scope.crearProducto = function(){
+ 		$("#comentarioForm").hide();
+ 		$("#productoForm").show();
+ 	}
 }]);
