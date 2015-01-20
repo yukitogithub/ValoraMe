@@ -29,3 +29,8 @@ body {
 .container-margin {
 	margin-top: 70px;
 }
+
+.list-fixed{
+	position: relative;
+top: -15px;
+}

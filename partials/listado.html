@@ -22,7 +22,7 @@
 							<option value="">Selecciona uno...</option>
 						</select>-->
 						<ul class="list-group list-fixed" >
-							<a href="" ng-repeat="item in data | filter:votated " ng-click="selected();" class="list-group-item" >{{item.votated}}</a>
+							<a href="" ng-repeat="item in products | filter:votated | limitTo:2" ng-click="selected();" class="list-group-item" >{{item.name}}</a>
 						</ul>
 					</div>
 					<div class="form-group">
@@ -44,7 +44,7 @@
 					</div>
 					<div class="form-group">
 						<label for="dateForm">Fecha</label>
-						<input class="form-control" id="dateForm" type="text" ng-model="date" placeholder="Fecha" required>
+						<input class="form-control" id="dateForm" type="date" ng-model="date" placeholder="Fecha" required>
 					</div>
 					<div class="form-group">
 						<label for="comentatorForm">Comentarista</label>
@@ -65,29 +65,32 @@
 				Agregar Producto/Servicio
 			</div>
 			<div class="panel-body">
-				<form name="productoSerivicioForm">
+				<form name="productoServicioForm">
 					<div class="form-group">
-						<label for="votatedForm">Producto/Servicio</label>
+						<label for="votatedProductForm">Producto/Servicio</label>
 						<input name="votated" class="form-control" id="votatedProductForm" type="text" ng-model="votated" placeholder="Producto/Servicio" required>
 					</div>
 					<div class="form-group">
-						<label for="commentForm">Descripción</label>
-						<textarea class="form-control" name="comment" id="commentProductForm" cols="30" rows="4" ng-model="comment" required></textarea>
+						<label for="descriptionProductForm">Descripción</label>
+						<textarea class="form-control" name="comment" id="descriptionProductForm" cols="30" rows="4" ng-model="description" required></textarea>
 					</div>
 					<div class="form-group">
-						<label for="dateForm">Fecha</label>
-						<input class="form-control" id="dateProductForm" type="text" ng-model="date" placeholder="Fecha" required>
+						<label for="dateProductForm">Fecha</label>
+						<input class="form-control" id="dateProductForm" type="date" ng-model="productDate" placeholder="Fecha" required>
 					</div>
 					<div class="form-group">
-						<label for="comentatorForm">Comentarista</label>
+						<label for="comentatorProductForm">Comentarista</label>
 						<input class="form-control" id="comentatorProductForm" type="text" ng-model="comentator" placeholder="Comentarista" required>
 					</div>
 					<div class="form-group">
-						<button ng-disabled="comentarioForm.$invalid" ng-click="agregarProducto()" class="btn btn-warning btn-block">Comentar</button>
+						<button ng-disabled="productoServicioForm.$invalid" ng-click="agregarProducto()" class="btn btn-warning btn-block">Agregar</button>
 					</div>
 				</form>
 				<div class="form-group">
-					<button ng-click="limpiarComentario()" class="btn btn-default btn-block">Limpiar Campos</button>
+					<button ng-click="limpiarProducto()" class="btn btn-default btn-block">Limpiar Campos</button>
+				</div>
+				<div class="form-group">
+					<button ng-click="volveraComentario()" class="btn btn-danger btn-block">Volver</button>
 				</div>
 			</div>
 		</div>
