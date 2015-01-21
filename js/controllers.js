@@ -67,7 +67,9 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 		'date': '2013-10-10',
 		'owner': 'Alguien 3'
 	}
-	]
+	];
+
+	$scope.stars = 0;
 
 	$scope.agregarComentario = function() {
 		var nuevoComentario = {
@@ -102,7 +104,7 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 	$scope.limpiarComentario = function() {
 		$scope.votated = '';
 		$scope.comment = '';
-		$scope.stars = '';
+		$scope.stars = 0;
 		$scope.date = '';
 		$scope.comentator = '';
 	}
