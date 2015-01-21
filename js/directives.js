@@ -14,3 +14,24 @@ valorameDirectives.directive('productos', function() {
 		templateUrl: 'partials/productos.html'
 	};
 });
+
+valorameDirectives.directive('forms',function(){
+	return{
+		restrict: 'E',
+		templateUrl: 'partials/forms.html'
+	}
+});
+
+valorameDirectives.directive('search',function(){
+	return{
+		restrict: 'E',
+		templateUrl: 'partials/search.html'
+	}
+});
+
+valorameDirectives.directive('listSelector',function(){
+	return{
+		restrict:'E',
+		templateUrl: 'partials/listSelector.html'
+	}
+})
