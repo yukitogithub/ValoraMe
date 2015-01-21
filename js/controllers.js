@@ -85,7 +85,7 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 
 	$scope.agregarProducto = function(){
 		var nuevoProducto = {
-			'name': $scope.votated,
+			'name': $scope.newVotated,
 			'description': $scope.description,
 			'date': $scope.productDate,
 			'owner': $scope.comentator
@@ -94,6 +94,7 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 		$scope.products.push(nuevoProducto);
 
 		$scope.volveraComentario();
+		$scope.votated = nuevoProducto.name;
 	}
 
 	$scope.criteria = "Any";
@@ -115,9 +116,12 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
  	$scope.crearProducto = function(){
  		$("#comentarioForm").hide();
  		$("#productoForm").show();
+ 		$scope.newVotated = $scope.votated;
+ 		$scope.radioSearch = 'products'
  	}
 
  	$scope.limpiarProducto = function() {
+		$scope.newVotated = '';
 		$scope.votated = '';
 		$scope.description = '';
 		$scope.productDate = '';
@@ -127,7 +131,18 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 	$scope.volveraComentario = function(){
  		$("#productoForm").hide();
  		$("#comentarioForm").show();
+ 		$scope.radioSearch = 'comments';
+ 		$scope.newVotated = '';
  		$scope.description = '';
 		$scope.productDate = '';
  	}
+
+ 	$scope.radioSearch = 'comments';
+
+ 	$scope.viewComments = function(product) {
+ 		$scope.radioSearch = 'comments';
+ 		$scope.criteria = 'Product/Service';
+ 		$scope.search = {'votated': product};
+ 	};
+
 }]);

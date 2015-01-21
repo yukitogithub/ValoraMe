@@ -22,8 +22,12 @@ body {
 	font-family: 'Lobster', cursive;
 }
 
-.panel-fixed-size {
+.panel-fixed-size-comment {
 	height: 180px;
+}
+
+.panel-fixed-size-product {
+	height: 140px;
 }
 
 .container-margin {
