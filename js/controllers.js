@@ -9,42 +9,42 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 		'votated': 'Personal',
 		'comment': 'La verdad que estoy muy disconforme con la compañía. Deja mucho que desear. Sobretodo la conexión!!!',
 		'stars': 1,
-		'date': '2015-01-16',
+		'date': new Date(2015,0,16),
 		'comentator': 'Fernando Luján'
 	},
 	{
 		'votated': 'Dell',
 	 	'comment': 'Realmente no lo recomiendo, tuve una y terminé quemándola. Ahora es un pisapapeles caro',
 	 	'stars': 2,
-	 	'date': '2015-01-14',
+	 	'date': new Date(2015,0,14),
 	 	'comentator': 'Kasuki Takemura'
 	},
 	{
 		'votated': 'Coca Cola',
 	 	'comment': 'Altamente recomendada, sobretodo cuando hace calor',
 	 	'stars': 5,
-	 	'date': '2015-01-10',
+	 	'date': new Date(2015,0,10),
 	 	'comentator': 'Pepsi co'
 	},
 	{
 		'votated': 'Personal',
 		'comment': 'La verdad que estoy muy disconforme con la compañía. Deja mucho que desear. Sobretodo la conexión!!!',
 		'stars': 1,
-		'date': '2015-01-16',
+		'date': new Date(2015,0,16),
 		'comentator': 'Fernando Luján'
 	},
 	{
 		'votated': 'Dell',
 	 	'comment': 'Realmente no lo recomiendo, tuve una y terminé quemándola. Ahora es un pisapapeles caro',
 	 	'stars': 2,
-	 	'date': '2015-01-14',
+	 	'date': new Date(2015,0,14),
 	 	'comentator': 'Kasuki Takemura'
 	},
 	{
 		'votated': 'Coca Cola',
 	 	'comment': 'Altamente recomendada, sobretodo cuando hace calor',
 	 	'stars': 5,
-	 	'date': '2015-01-10',
+	 	'date': new Date(2015,0,10),
 	 	'comentator': 'Pepsi co'
 	}
 	];
@@ -52,19 +52,19 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 	$scope.products = [{
 		'name': 'Personal',
 		'description': 'Una empresa de telefonía',
-		'date': '2015-01-19',
+		'date': new Date(2015,0,19),
 		'owner': 'Alguien'
 	},
 	{
 		'name': 'Dell',
 		'description': 'Una empresa de informática',
-		'date': '2014-12-14',
+		'date': new Date(2014,11,14),
 		'owner': 'Alguien 2'
 	},
 	{
 		'name': 'Coca Cola',
 		'description': 'Una empresa de refrescos',
-		'date': '2013-10-10',
+		'date': new Date(2013,9,10),
 		'owner': 'Alguien 3'
 	}
 	];
