@@ -1,6 +1,7 @@
 var valorame = angular.module('valorame',[
 	'ngRoute',
-	'valorameControllers'
+	'valorameControllers',
+	'valorameDirectives'
 	]);
 
 valorame.config(['$routeProvider',
