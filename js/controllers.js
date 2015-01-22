@@ -148,3 +148,14 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
  	};
 
 }]);
+
+valorameControllers.controller('ProfileController', ['$scope', function($scope) {
+	$scope.profile = {
+		'username' : 'mastodonte',
+		'name' : 'John',
+		'lastname' : 'Doe',
+		'email' : 'johndoe@mastodonte.net',
+		'born' : Date(1985,8,14)
+	};
+	
+}]);

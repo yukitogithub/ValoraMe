@@ -15,6 +15,10 @@ valorame.config(['$routeProvider',
 			templateUrl: 'partials/listado.html',
 			controller: 'ListadoController'
 		})
+		.when('/profile', {
+			templateUrl: 'partials/profile.html',
+			controller: 'ProfileController'
+		})
 		.otherwise({
 			redirectTo: '/index'
 		});
