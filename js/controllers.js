@@ -8,7 +8,7 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 	$scope.data = [{
 		'votated': 'Personal',
 		'comment': 'La verdad que estoy muy disconforme con la compañía. Deja mucho que desear. Sobretodo la conexión!!!',
-		'stars': 1,
+		'stars': 0.5,
 		'date': new Date(2015,0,16),
 		'comentator': 'Fernando Luján'
 	},
@@ -22,21 +22,21 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 	{
 		'votated': 'Coca Cola',
 	 	'comment': 'Altamente recomendada, sobretodo cuando hace calor',
-	 	'stars': 5,
+	 	'stars': 3.8,
 	 	'date': new Date(2015,0,10),
 	 	'comentator': 'Pepsi co'
 	},
 	{
 		'votated': 'Personal',
 		'comment': 'La verdad que estoy muy disconforme con la compañía. Deja mucho que desear. Sobretodo la conexión!!!',
-		'stars': 1,
+		'stars': 1.7,
 		'date': new Date(2015,0,16),
 		'comentator': 'Fernando Luján'
 	},
 	{
 		'votated': 'Dell',
 	 	'comment': 'Realmente no lo recomiendo, tuve una y terminé quemándola. Ahora es un pisapapeles caro',
-	 	'stars': 2,
+	 	'stars': 2.5,
 	 	'date': new Date(2015,0,14),
 	 	'comentator': 'Kasuki Takemura'
 	},

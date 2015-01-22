@@ -34,13 +34,14 @@
 			</div>
 			<div class="panel-body panel-fixed-size-comment">
 				<p>
-					<span class="star-rating">
-						<input type="radio" name="{{index}}" value="1" ng-model="item.stars" disabled="disabled"><i></i>
+					<div class="star-rating-display-only">
+						<div style="width:{{item.stars * 20}}%;"></div>
+						<!--input type="radio" name="{{index}}" value="1" ng-model="item.stars" disabled="disabled"><i></i>
 						<input type="radio" name="{{index}}" value="2" ng-model="item.stars" disabled="disabled"><i></i>
 						<input type="radio" name="{{index}}" value="3" ng-model="item.stars" disabled="disabled"><i></i>
 						<input type="radio" name="{{index}}" value="4" ng-model="item.stars" disabled="disabled"><i></i>
-						<input type="radio" name="{{index}}" value="5" ng-model="item.stars" disabled="disabled"><i></i>
-					</span> <strong>{{item.stars}}</strong>
+						<input type="radio" name="{{index}}" value="5" ng-model="item.stars" disabled="disabled"><i></i-->
+					</div> <strong>{{item.stars}}</strong>
 				</p>
 				<p><strong>Comment: </strong>{{item.comment}}</p>
 				<p><strong>Date: </strong>{{item.date | date}}</p>
