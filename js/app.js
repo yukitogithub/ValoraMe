@@ -7,9 +7,13 @@ var valorame = angular.module('valorame',[
 valorame.config(['$routeProvider',
 	function($routeProvider){
 		$routeProvider
-		.when('/index', {
+		.when('/', {
 			templateUrl: 'partials/portada.html',
 			/*controller: 'PortadaController'*/
+		})
+		.when('/index', {
+			templateUrl: 'partials/main.html',
+			controller: 'MainController'
 		})
 		.when('/listado', {
 			templateUrl: 'partials/listado.html',
@@ -20,6 +24,6 @@ valorame.config(['$routeProvider',
 			controller: 'ProfileController'
 		})
 		.otherwise({
-			redirectTo: '/index'
+			redirectTo: '/'
 		});
 	}]);

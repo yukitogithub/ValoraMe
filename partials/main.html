@@ -1,0 +1,56 @@
+<div class="container container-margin">
+	<div class="row">
+		<div class="col-md-12">
+			<p class="text-center">ACA VA LA BUSQUEDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+		</div>
+	</div>
+
+	<div class="col-md-2">
+		<div class="page-header">
+			<h3 class="text-center">Mejores Productos</h3>
+		</div>
+		<div class="row" ng-repeat="item in bestProducts | orderBy:'-avg'">
+			<div class="text-center">
+				<div class="star-rating-display-only star-rating-one-star">
+					<div style="width:{{item.avg * 20}}%">
+					</div>
+					<div class="star-rating-text">
+						<br>
+						<h2>{{item.avg}}</h2>
+						<h3><span class="label label-warning">{{item.name}}</span></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-8">
+	<div class="page-header">
+		<h2 class="text-center">Últimos Comentarios</h2>
+	</div>
+		<div ng-repeat="item in lastComments | orderBy:'-date'" class="col-md-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h3 class="panel-title"><strong>Product/Service: </strong>{{item.votated}}</h3>
+				</div>
+				<div class="panel-body panel-fixed-size-comment">
+					<p>
+						<div class="star-rating-display-only">
+							<div style="width:{{item.stars * 20}}%;"></div>
+						</div> <strong>{{item.stars}}</strong>
+					</p>
+					<p><strong>Comment: </strong>{{item.comment}}</p>
+					<p><strong>Date: </strong>{{item.date | date}}</p>
+				</div>
+				<div class="panel-footer"><footer><strong>Comentador: </strong>{{item.comentator}}</footer></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div class="page-header">
+			<h3 class="text-center">Peores Productos</h3>
+		</div>
+		<div class="row" ng-repeat="item in worstProducts | orderBy:'avg'">
+			{{item.name}}, {{item.avg}}
+		</div>
+	</div>	
+</div>

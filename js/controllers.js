@@ -159,3 +159,94 @@ valorameControllers.controller('ProfileController', ['$scope', function($scope) 
 	};
 	
 }]);
+
+valorameControllers.controller('MainController', ['$scope', function($scope) {
+
+	$scope.bestProducts = [{
+		'name': 'Personal',
+		'avg': 4.2
+	},
+	{
+		'name': 'Dell',
+		'avg': 3.9
+	},
+	{
+		'name': 'Coca Cola',
+		'avg': 4.7
+	},
+	{
+		'name': 'Ferrari',
+		'avg': 3.7
+	},
+	{
+		'name': 'Ticsa',
+		'avg': 4.0
+	}];
+
+	$scope.worstProducts = [{
+		'name': 'Claro',
+		'avg': 0.2
+	},
+	{
+		'name': 'HP',
+		'avg': 1.4
+	},
+	{
+		'name': 'Manaos',
+		'avg': 2.2
+	},
+	{
+		'name': 'Lamborghini',
+		'avg': 2.0
+	},
+	{
+		'name': 'Ataco Norte',
+		'avg': 1.5
+	}];
+
+	$scope.lastComments = [{
+		'votated': 'Personal',
+		'comment': 'La verdad que estoy muy disconforme con la compañía. Deja mucho que desear. Sobretodo la conexión!!!',
+		'stars': 1,
+		'date': new Date(2015,0,16),
+		'comentator': 'Fernando Luján'
+	},
+	{
+		'votated': 'Dell',
+	 	'comment': 'Realmente no lo recomiendo, tuve una y terminé quemándola. Ahora es un pisapapeles caro',
+	 	'stars': 2,
+	 	'date': new Date(2015,0,14),
+	 	'comentator': 'Kasuki Takemura'
+	},
+	{
+		'votated': 'Coca Cola',
+	 	'comment': 'Altamente recomendada, sobretodo cuando hace calor',
+	 	'stars': 4,
+	 	'date': new Date(2015,0,10),
+	 	'comentator': 'Pepsi co'
+	},
+	{
+		'votated': 'Personal',
+		'comment': 'La verdad que estoy muy disconforme con la compañía. Deja mucho que desear. Sobretodo la conexión!!!',
+		'stars': 2,
+		'date': new Date(2015,0,16),
+		'comentator': 'Fernando Luján'
+	},
+	{
+		'votated': 'Dell',
+	 	'comment': 'Realmente no lo recomiendo, tuve una y terminé quemándola. Ahora es un pisapapeles caro',
+	 	'stars': 3,
+	 	'date': new Date(2015,0,14),
+	 	'comentator': 'Kasuki Takemura'
+	},
+	{
+		'votated': 'Coca Cola',
+	 	'comment': 'Altamente recomendada, sobretodo cuando hace calor',
+	 	'stars': 5,
+	 	'date': new Date(2015,0,10),
+	 	'comentator': 'Pepsi co'
+	}
+	];
+
+}]);
+
