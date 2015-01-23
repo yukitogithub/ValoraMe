@@ -38,3 +38,25 @@ body {
 	position: relative;
 top: -15px;
 }
+
+h2.star {
+	margin-top: 40px;
+	margin-bottom: 0px;
+	font-weight: bold;
+}
+
+h3.star {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+p.star {
+	margin-top: 0px;
+}
+
+span.label.star {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: inline-block;
+	max-width: 150px;
+}

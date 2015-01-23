@@ -15,15 +15,35 @@
 					<div style="width:{{item.avg * 20}}%">
 					</div>
 					<div class="star-rating-text">
-						<br>
-						<h2>{{item.avg}}</h2>
-						<h3><span class="label label-warning">{{item.name}}</span></h3>
+						<h2 class="star">{{item.avg}}</h2>
+						<h3 class="star"><span class="label label-warning star">{{item.name}}</span></h3>
+						<p class="star"><span class="glyphicon glyphicon-user"></span> 2842847</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-8">
+
+	<div class="col-md-2 col-md-push-8">
+		<div class="page-header">
+			<h3 class="text-center">Peores Productos</h3>
+		</div>
+		<div class="row" ng-repeat="item in worstProducts | orderBy:'avg'">
+			<div class="text-center">
+				<div class="star-rating-display-only star-rating-one-star">
+					<div style="width:{{item.avg * 20}}%">
+					</div>
+					<div class="star-rating-text">
+						<h2 class="star">{{item.avg}}</h2>
+						<h3 class="star"><span class="label label-default star">{{item.name}}</span></h3>
+						<p class="star"><span class="glyphicon glyphicon-user"></span> 2842847</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-8 col-md-pull-2">
 	<div class="page-header">
 		<h2 class="text-center">Últimos Comentarios</h2>
 	</div>
@@ -45,12 +65,5 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-2">
-		<div class="page-header">
-			<h3 class="text-center">Peores Productos</h3>
-		</div>
-		<div class="row" ng-repeat="item in worstProducts | orderBy:'avg'">
-			{{item.name}}, {{item.avg}}
-		</div>
-	</div>	
+		
 </div>
