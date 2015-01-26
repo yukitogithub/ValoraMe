@@ -164,7 +164,7 @@ valorameControllers.controller('ProfileController', ['$scope', function($scope) 
 		'name' : 'John',
 		'lastname' : 'Doe',
 		'email' : 'johndoe@mastodonte.net',
-		'born' : Date(1985,8,14)
+		'born' : new Date(1985,8,14)
 	};
 
 	$scope.pillPrincipal = true;

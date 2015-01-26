@@ -60,3 +60,7 @@ span.label.star {
 	display: inline-block;
 	max-width: 150px;
 }
+
+div.col-margin-15 {
+	margin-top: 15px;
+}

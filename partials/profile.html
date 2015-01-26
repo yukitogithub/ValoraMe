@@ -2,13 +2,12 @@
 	<div class="col-md-3">
 		<div class="panel panel-default">
 			<div class="panel-heading text-center">
-				Titulo
+				Acciones
 			</div>
 			<div class="panel-body">
-				<p>Aqui</p>
-				<p>puede</p>
-				<p>ir</p>
-				<p>algo</p>
+				<p><a class="btn btn-default btn-block" href="">Editar Datos</a></p>
+				<p><a class="btn btn-default btn-block" href="">Cambiar Contraseña</a></p>
+				<p><a class="btn btn-danger btn-block" href="">Cerrar Cuenta</a></p>
 			</div>
 		</div>
 	</div>
@@ -17,10 +16,16 @@
 			<li role="presentation" ng-class="{'active':pillPrincipal}"><a ng-click="pillPrincipal = true">Principal</a></li>
 			<li role="presentation" ng-class="{'active': !pillPrincipal}"><a ng-click="pillPrincipal = false">Información Secundaria</a></li>
 		</ul>
-		<div class="row" ng-show="pillPrincipal">
-			Este es la info principal
+		<div class="col-md-12 col-margin-15" ng-show="pillPrincipal">
+				<ul class="list-group">
+					<li class="list-group-item"><strong>Usuario: </strong>{{profile.username}}</li>
+					<li class="list-group-item"><strong>Nombre: </strong>{{profile.name}}</li>
+					<li class="list-group-item"><strong>Apellido: </strong>{{profile.lastname}}</li>
+					<li class="list-group-item"><strong>E-Mail: </strong>{{profile.email}}</li>
+					<li class="list-group-item"><strong>Fecha Nacimiento: </strong>{{profile.born | date}}</li>
+				</ul>
 		</div>
-		<div class="row" ng-show="!pillPrincipal">
+		<div class="col-md-12 col-margin-15" ng-show="!pillPrincipal">
 			Este es la info secundaria
 		</div>
 	</div>
