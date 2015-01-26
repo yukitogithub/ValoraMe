@@ -48,6 +48,8 @@
 					</div>
 				</div>
 
+				<button class="btn btn-block btn-warning" ng-click="limpiarFiltros()">Limpiar Filtros</button>
+
 			</div>
 		</div>
 	</div>
@@ -67,6 +69,7 @@
 						</div> <strong>{{item.stars}}</strong>
 					</p>
 					<p><strong>Categoría: </strong>{{item.categoria}}</p>
+					<p><a class="btn btn-warning btn-sm pull-right" href="#/view/{{item.id}}">Ver Detalles</a></p>
 				</div>
 			</div>
 		</div>

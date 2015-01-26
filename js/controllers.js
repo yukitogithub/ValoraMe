@@ -4,6 +4,13 @@ valorameControllers.controller('PortadaController',['$scope', function($scope){
 	
 }]);
 
+valorameControllers.controller('NavbarController', ['$scope', function($scope){
+	$scope.buscar = function() {
+		window.location.href = "#/search/" + $scope.navbarBuscar;
+		$scope.navbarBuscar = '';
+	};
+}]);
+
 valorameControllers.controller('ListadoController',['$scope', function($scope){
 	$scope.data = [{
 		'votated': 'Personal',
@@ -272,51 +279,61 @@ valorameControllers.controller('SearchController',
 			],
 		resultados: [
 			{
+				id: 542,
 				name: "Nokia Lumia 710",
 				categoria: "Electrónicos",
 				stars: 3.8
 			},
 			{
+				id: 237,
 				name: "Dell Studio 1557",
 				categoria: "Electrónicos",
 				stars: 2.4
 			},
 			{
+				id: 98,
 				name: "Dell",
 				categoria: "Electrónicos",
 				stars: 3.9
 			},
 			{
+				id: 442,
 				name: "Dr. Londero",
 				categoria: "Servicios de Medicina",
 				stars: 4.1
 			},
 			{
+				id: 1551,
 				name: "Centro de Salud Nordeste",
 				categoria: "Servicios de Medicina",
 				stars: 3.3
 			},
 			{
+				id: 197,
 				name: "Miraflores",
 				categoria: "Restaurants",
 				stars: 4.0
 			},
 			{
+				id: 902,
 				name: "San Jose",
 				categoria: "Restaurants",
 				stars: 4.1
 			},
 			{
+				id: 444,
 				name: "La Bianca",
 				categoria: "Restaurants",
 				stars: 4.5
 			},
 			{
+				id: 3,
 				name: "Coca Cola",
 				categoria: "Alimentos",
 				stars: 4.8
 			},
 			{
+				id: 55,
 				name: "Paty Finitas",
 				categoria: "Alimentos",
 				stars: 4.5
@@ -337,8 +354,9 @@ valorameControllers.controller('SearchController',
     	};
 	};
 
-
-
-	
+	$scope.limpiarFiltros = function() {
+		$scope.stars.min = 0;
+		$scope.stars.max = 5;
+		$scope.filtro.categoria = "";
+	};
 }]);
-

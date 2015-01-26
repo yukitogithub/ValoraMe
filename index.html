@@ -19,7 +19,7 @@
 	</head>
 	<body>
 
-		<nav class="navbar navbar-default navbar-fixed-top">
+		<nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavbarController">
 			<div class="container">
 				<div class="navbar-header">
 					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#valorame-navbar-collapse-1">
@@ -32,6 +32,15 @@
 				</div>
 				
 				<div class="collapse navbar-collapse" id="valorame-navbar-collapse-1">
+					
+					<!-- Search -->
+					<div class="navbar-form navbar-left">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Buscar..." ng-model="navbarBuscar" ng-keyup="$event.keyCode == 13 ? buscar() : null">
+						</div>
+						<a id="buscarButton" class="btn btn-default" ng-click="buscar()">Buscar</a>
+					</div>
+
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" >USUARIO MASTODONTE <span class="caret"></span></a>
