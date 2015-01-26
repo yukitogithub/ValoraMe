@@ -35,10 +35,12 @@
 					
 					<!-- Search -->
 					<div class="navbar-form navbar-left">
-						<div class="form-group">
+						<div class="input-group">
 							<input type="text" class="form-control" placeholder="Buscar..." ng-model="navbarBuscar" ng-keyup="$event.keyCode == 13 ? buscar() : null">
+							<span class="input-group-btn">
+								<a id="buscarButton" class="btn btn-default" ng-click="buscar()">Buscar</a>
+							</span>
 						</div>
-						<a id="buscarButton" class="btn btn-default" ng-click="buscar()">Buscar</a>
 					</div>
 
 					<ul class="nav navbar-nav navbar-right">
