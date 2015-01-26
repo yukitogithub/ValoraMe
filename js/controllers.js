@@ -5,6 +5,8 @@ valorameControllers.controller('PortadaController',['$scope', function($scope){
 }]);
 
 valorameControllers.controller('NavbarController', ['$scope', function($scope){
+	$scope.navbarBuscar = '';
+
 	$scope.buscar = function() {
 		window.location.href = "#/search/" + $scope.navbarBuscar;
 		$scope.navbarBuscar = '';
@@ -164,6 +166,8 @@ valorameControllers.controller('ProfileController', ['$scope', function($scope) 
 		'email' : 'johndoe@mastodonte.net',
 		'born' : Date(1985,8,14)
 	};
+
+	$scope.pillPrincipal = true;
 	
 }]);
 

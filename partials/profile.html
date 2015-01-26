@@ -1,0 +1,27 @@
+<div class="container container-margin">
+	<div class="col-md-3">
+		<div class="panel panel-default">
+			<div class="panel-heading text-center">
+				Titulo
+			</div>
+			<div class="panel-body">
+				<p>Aqui</p>
+				<p>puede</p>
+				<p>ir</p>
+				<p>algo</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-9">
+		<ul class="nav nav-pills nav-pills-warning">
+			<li role="presentation" ng-class="{'active':pillPrincipal}"><a ng-click="pillPrincipal = true">Principal</a></li>
+			<li role="presentation" ng-class="{'active': !pillPrincipal}"><a ng-click="pillPrincipal = false">Información Secundaria</a></li>
+		</ul>
+		<div class="row" ng-show="pillPrincipal">
+			Este es la info principal
+		</div>
+		<div class="row" ng-show="!pillPrincipal">
+			Este es la info secundaria
+		</div>
+	</div>
+</div>
