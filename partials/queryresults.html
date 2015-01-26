@@ -1,0 +1,74 @@
+<div class="container container-margin">
+	<div class="col-md-3">
+		<div class="panel panel-default">
+			<div class="panel-heading text-center">
+				Filtros de búsqueda
+			</div>
+			<div class="panel-body">
+
+				<div class="form-group">
+					<label for="order">Ordenar Por</label>
+					<select name="order" id="order" class="form-control" ng-model="selectOrder">
+						<option value="name">Nombre</option>
+						<option value="stars">Estrellas</option>
+						<option value="categoria">Categoría</option>
+					</select>
+					<div class="form-group text-center">
+					
+						<h4><input type="radio" name="ascdesc" id="asc" autcomplete="off" ng-model="direction" checked> <span class="glyphicon glyphicon-sort-by-alphabet"> </span>
+					
+						<input type="radio" name="ascdesc" id="desc" autcomplete="off" value="reverse" ng-model="direction"> <span class="glyphicon glyphicon-sort-by-alphabet-alt"> </span></h4>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="categoria">Categoría</label>
+					<select class="form-control" name="categoria" id="categoria" ng-model="filtro.categoria">
+						<option value="">Todas</option>
+						<option ng-repeat="option in data.categorias" value="{{ option.name }}">{{ option.name }}</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="">Estrellas</label>
+					<div class="form-group">
+						<label class="sr-only" for="starsmin">Min</label>
+						<div class="input-group">
+							<input id="starsmin" class="form-control" type="number" min="0" max="5" placeholder="Mín..." ng-model="stars.min" value=0>
+							<span class="input-group-addon">Mín</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="starsmax">Max</label>
+						<div class="input-group">
+							<input id="starsmax" class="form-control" type="number" min="0" max="5" placeholder="Máx..." ng-model="stars.max" value=5>
+							<span class="input-group-addon">Máx</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="col-md-9">
+		<div class="page-header">
+			<h1>Resultados de <i>{{busqueda}}</i>:</h1>
+		</div>
+		<div class="col-md-6" ng-repeat="item in data.resultados | filter:filtro | filter:greaterThan('stars', stars.min) | filter:lessThan('stars', stars.max) | orderBy: selectOrder : direction">
+			<div class="panel panel-warning">
+				<div class="panel-heading text-center">
+					<h3 class="panel-title">{{item.name}}</h3>
+				</div>
+				<div class="panel-body">
+					<p>
+						<div class="star-rating-display-only">
+							<div style="width:{{item.stars * 20}}%;"></div>
+						</div> <strong>{{item.stars}}</strong>
+					</p>
+					<p><strong>Categoría: </strong>{{item.categoria}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
