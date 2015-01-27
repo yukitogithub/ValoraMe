@@ -172,6 +172,29 @@ valorameControllers.controller('ProfileController', ['$scope', function($scope) 
 	};
 
 	$scope.pillPrincipal = true;
+
+	$scope.iniciarEditarForm = function() {
+		$scope.newName = $scope.profile.name;
+		$scope.newLastname = $scope.profile.lastname;
+		$scope.newEmail = $scope.profile.email;
+		$scope.newBorn = $scope.profile.born;
+		$scope.newCity = $scope.profile.city;
+		$scope.newProvince = $scope.profile.province;
+		$scope.newCountry = $scope.profile.country;
+	};
+
+	$scope.iniciarEditarForm();
+
+	$scope.guardarCambiosDatos = function() {
+		$scope.profile.name = $scope.newName;
+		$scope.profile.lastname = $scope.newLastname;
+		$scope.profile.email = $scope.newEmail;
+		$scope.profile.born = $scope.newBorn;
+		$scope.profile.city = $scope.newCity;
+		$scope.profile.province = $scope.newProvince;
+		$scope.profile.country = $scope.newCountry;
+		$("#editar-datos").modal('hide');
+	};
 	
 }]);
 

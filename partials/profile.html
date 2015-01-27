@@ -5,7 +5,7 @@
 				Acciones
 			</div>
 			<div class="panel-body">
-				<p><a class="btn btn-default btn-block" href="">Editar Datos</a></p>
+				<p><button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#editar-datos" ng-click="iniciarEditarForm()">Editar Datos</button></p>
 				<p><a class="btn btn-default btn-block" href="">Cambiar Contraseña</a></p>
 				<p><a class="btn btn-danger btn-block" href="">Cerrar Cuenta</a></p>
 			</div>
@@ -59,6 +59,59 @@
 					<h4 class="list-group-item-heading">asdfsdsa</h4>
 					<p class="list-group-item-text">asfdsa</p>
 				</li>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Form Editar Datos -->
+
+<div class="modal fade" id="editar-datos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Editar Datos</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="nombre">Nombre</label>
+							<input name="nombre" type="text" class="form-control" ng-model="newName">
+						</div>
+						<div class="form-group">
+							<label for="apellido">Apellido</label>
+							<input name="apellido" type="text" class="form-control"ng-model="newLastname">
+						</div>
+						<div class="form-group">
+							<label for="email">E-Mail</label>
+							<input name="email" type="email" class="form-control" ng-model="newEmail">
+						</div>
+						<div class="form-group">
+							<label for="fecha-nacimiento">Fecha Nacimiento</label>
+							<input name="fecha-nacimiento" type="date" class="form-control" ng-model="newBorn">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="ciudad">Ciudad</label>
+							<input name="ciudad" type="text" class="form-control" ng-model="newCity">
+						</div>
+						<div class="form-group">
+							<label for="provincia">Provincia/Estado/Región</label>
+							<input name="provincia" type="text" class="form-control" ng-model="newProvince">
+						</div>
+						<div class="form-group">
+							<label for="pais">País</label>
+							<input name="pais" type="text" class="form-control" ng-model="newCountry">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-primary" ng-click="guardarCambiosDatos()">Guardar Cambios</button>
 			</div>
 		</div>
 	</div>
