@@ -164,7 +164,11 @@ valorameControllers.controller('ProfileController', ['$scope', function($scope) 
 		'name' : 'John',
 		'lastname' : 'Doe',
 		'email' : 'johndoe@mastodonte.net',
-		'born' : new Date(1985,8,14)
+		'born' : new Date(1985,8,14),
+		'img' : 'http://fr.cdn.v5.futura-sciences.com/sources/images/dossier/rte/2672_grotte_073.jpg',
+		'city' : 'Resistencia',
+		'province' : 'Chaco',
+		'country' : 'Argentina'
 	};
 
 	$scope.pillPrincipal = true;
@@ -174,45 +178,65 @@ valorameControllers.controller('ProfileController', ['$scope', function($scope) 
 valorameControllers.controller('MainController', ['$scope', function($scope) {
 
 	$scope.bestProducts = [{
+		'id': 147,
 		'name': 'Personal',
-		'avg': 4.2
+		'avg': 4.2,
+		'comments': 2662347
 	},
 	{
+		'id': 117,
 		'name': 'Dell',
-		'avg': 3.9
+		'avg': 3.9,
+		'comments': 2632847
 	},
 	{
+		'id': 7,
 		'name': 'Coca Cola',
-		'avg': 4.7
+		'avg': 4.7,
+		'comments': 2842632
 	},
 	{
+		'id': 747,
 		'name': 'Ferrari',
-		'avg': 3.7
+		'avg': 3.7,
+		'comments': 2846211
 	},
 	{
+		'id': 57,
 		'name': 'Ticsa',
-		'avg': 4.0
+		'avg': 4.0,
+		'comments': 1563457
 	}];
 
 	$scope.worstProducts = [{
+		'id': 18,
 		'name': 'Claro',
-		'avg': 0.2
+		'avg': 0.2,
+		'comments': 2345847
 	},
 	{
+		'id': 8,
 		'name': 'HP',
-		'avg': 1.4
+		'avg': 1.4,
+		'comments': 6542847
 	},
 	{
+		'id': 15,
 		'name': 'Manaos',
-		'avg': 2.2
+		'avg': 2.2,
+		'comments': 2235347
 	},
 	{
+		'id': 771,
 		'name': 'Lamborghini',
-		'avg': 2.0
+		'avg': 2.0,
+		'comments': 7623847
 	},
 	{
+		'id': 95,
 		'name': 'Ataco Norte',
-		'avg': 1.5
+		'avg': 1.5,
+		'comments': 2834147
 	}];
 
 	$scope.lastComments = [{

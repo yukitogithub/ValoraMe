@@ -1,10 +1,4 @@
 <div class="container container-margin">
-	<div class="row">
-		<div class="col-md-12">
-			<p class="text-center">ACA VA LA BUSQUEDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-		</div>
-	</div>
-
 	<div class="col-md-2">
 		<div class="page-header">
 			<h3 class="text-center">Mejores Productos</h3>
@@ -16,8 +10,8 @@
 					</div>
 					<div class="star-rating-text">
 						<h2 class="star">{{item.avg}}</h2>
-						<h3 class="star"><span class="label label-warning star">{{item.name}}</span></h3>
-						<p class="star"><span class="glyphicon glyphicon-user"></span> 2842847</p>
+						<h3 class="star"><a href="#/view/{{item.id}}"><span class="label label-warning star">{{item.name}}</span></a></h3>
+						<p class="star"><span class="glyphicon glyphicon-user"></span> {{item.comments}}</p>
 					</div>
 				</div>
 			</div>
@@ -35,8 +29,8 @@
 					</div>
 					<div class="star-rating-text">
 						<h2 class="star">{{item.avg}}</h2>
-						<h3 class="star"><span class="label label-default star">{{item.name}}</span></h3>
-						<p class="star"><span class="glyphicon glyphicon-user"></span> 2842847</p>
+						<h3 class="star"><a href="#/view/{{item.id}}"><span class="label label-default star">{{item.name}}</span></a></h3>
+						<p class="star"><span class="glyphicon glyphicon-user"></span> {{item.comments}}</p>
 					</div>
 				</div>
 			</div>

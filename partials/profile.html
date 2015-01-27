@@ -17,16 +17,49 @@
 			<li role="presentation" ng-class="{'active': !pillPrincipal}"><a ng-click="pillPrincipal = false">Información Secundaria</a></li>
 		</ul>
 		<div class="col-md-12 col-margin-15" ng-show="pillPrincipal">
-				<ul class="list-group">
-					<li class="list-group-item"><strong>Usuario: </strong>{{profile.username}}</li>
-					<li class="list-group-item"><strong>Nombre: </strong>{{profile.name}}</li>
-					<li class="list-group-item"><strong>Apellido: </strong>{{profile.lastname}}</li>
-					<li class="list-group-item"><strong>E-Mail: </strong>{{profile.email}}</li>
-					<li class="list-group-item"><strong>Fecha Nacimiento: </strong>{{profile.born | date}}</li>
-				</ul>
+			<div class="col-md-4 text-center">
+				<img ng-src="{{profile.img}}" class="img-responsive img-thumbnail">
+			</div>
+			<div class="col-md-8">
+				<div class="list-group">
+					<li class="list-group-item">
+						<h4 class="list-group-item-heading">Usuario</h4>
+						<p class="list-group-item-text">{{profile.username}}</p>
+					</li>
+					<li class="list-group-item">
+						<h4 class="list-group-item-heading">Nombre y Apellido</h4>
+						<p class="list-group-item-text">{{profile.name}} {{profile.lastname}}</p>
+					</li>
+					<li class="list-group-item">
+						<h4 class="list-group-item-heading">E-Mail</h4>
+						<p class="list-group-item-text">{{profile.email}}</p>
+					</li>
+					<li class="list-group-item">
+						<h4 class="list-group-item-heading">Fecha Nacimiento</h4>
+						<p class="list-group-item-text">{{profile.born | date}}</p>
+					</li>
+				</div>
+			</div>
 		</div>
 		<div class="col-md-12 col-margin-15" ng-show="!pillPrincipal">
-			Este es la info secundaria
+			<div class="list-group">
+				<li class="list-group-item">
+					<h4 class="list-group-item-heading">Ubicación</h4>
+					<p class="list-group-item-text">{{profile.city}} - {{profile.province}} - {{profile.country}}</p>
+				</li>
+				<li class="list-group-item">
+					<h4 class="list-group-item-heading">sdafsa</h4>
+					<p class="list-group-item-text">zdsfvsdf</p>
+				</li>
+				<li class="list-group-item">
+					<h4 class="list-group-item-heading">sadfaa</h4>
+					<p class="list-group-item-text">sadfvdas</p>
+				</li>
+				<li class="list-group-item">
+					<h4 class="list-group-item-heading">asdfsdsa</h4>
+					<p class="list-group-item-text">asfdsa</p>
+				</li>
+			</div>
 		</div>
 	</div>
 </div>
