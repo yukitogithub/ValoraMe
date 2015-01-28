@@ -4,13 +4,27 @@ valorameControllers.controller('PortadaController',['$scope', function($scope){
 	
 }]);
 
-valorameControllers.controller('NavbarController', ['$scope', function($scope){
+valorameControllers.controller('NavbarController', ['$scope' ,'$location', function($scope, $location){
 	$scope.navbarBuscar = '';
 
 	$scope.buscar = function() {
 		window.location.href = "#/search/" + $scope.navbarBuscar;
 		$scope.navbarBuscar = '';
 	};
+
+	$scope.menu = [{
+		'title': 'Inicio',
+		'link': '/index'
+	},
+	{
+		'title': 'Perfil',
+		'link': '/profile'
+	}];
+
+	$scope.isActive = function(route) {
+		return route === $location.path();
+	};
+
 }]);
 
 valorameControllers.controller('ListadoController',['$scope', function($scope){
