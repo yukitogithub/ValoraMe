@@ -64,3 +64,7 @@ span.label.star {
 div.col-margin-15 {
 	margin-top: 15px;
 }
+
+.angular-google-map-container {
+	height: 400px;
+}

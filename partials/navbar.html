@@ -1,0 +1,41 @@
+<nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavbarController">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#valorame-navbar-collapse-1">
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#/index" class="navbar-brand lobster-font">ValoraMe</a>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="valorame-navbar-collapse-1">
+			
+			<ul class="nav navbar-nav">
+				<li><a href="#/index">Inicio</a></li>
+			</ul>
+			<!-- Search -->
+			<div class="navbar-form navbar-left">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Buscar..." ng-model="navbarBuscar" ng-keyup="$event.keyCode == 13 ? buscar() : null">
+					<span class="input-group-btn">
+						<a id="buscarButton" class="btn btn-default" ng-click="buscar()">Buscar</a>
+					</span>
+				</div>
+			</div>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" >USUARIO MASTODONTE <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#/profile">Ver Perfil</a></li>
+						<li><a href="">Ajustes</a></li>
+						<li class="divider"></li>
+						<li><a href="">Cerrar Sesión</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

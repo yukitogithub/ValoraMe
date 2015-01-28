@@ -195,7 +195,7 @@ valorameControllers.controller('ProfileController', ['$scope', function($scope) 
 		$scope.profile.country = $scope.newCountry;
 		$("#editar-datos").modal('hide');
 	};
-	
+
 }]);
 
 valorameControllers.controller('MainController', ['$scope', function($scope) {
