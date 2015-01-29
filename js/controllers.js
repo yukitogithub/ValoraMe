@@ -333,6 +333,7 @@ valorameControllers.controller('ProductController',
 		'category' : 'Telefonía',
 		'stars' : 3.2,
 		'description' : 'Una empresa radicada en Argentina, dependiente de Telecom, que provee servicios de telefonía celular a sus clientes. Fundada en 1492, cuando Colón descubrió supuestamente América.',
+		'addedBy' : 'Cosme Fulanito',
 		'img' : 'https://oceanoneuronal.files.wordpress.com/2012/06/logo_personal_nuevo.jpg',
 		'links' :
 			[{

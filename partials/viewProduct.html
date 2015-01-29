@@ -6,16 +6,61 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<div class="col-md-8 col-md-push-4">
-					<h2 class="text-center">{{product.name}}</h2>
+					<h1 class="text-center">{{product.name}}</h1>
 					<p><strong>Categoría: </strong>{{product.category}}</p>
-					<p>Estrellas</p>
+					<p>
+						<div class="star-rating-display-only">
+							<div style="width:{{product.stars * 20}}%;"></div>
+						</div> <strong>{{product.stars}}</strong>
+					</p>
 					<p class="text-justify"><strong>Descripción: </strong>{{product.description}}</p>
 				</div>
 				<div class="col-md-4 col-md-pull-8">
-					<img ng-src="{{product.img}}" alt="" class="img-responsive img-thumbnail">
+					<p class="text-center"><img ng-src="{{product.img}}" alt="" class="img-responsive img-thumbnail"></p>
 					<p class="text-center">
 						<a ng-repeat="link in product.links" href="{{link.url}}" class="btn btn-link">{{link.title}}</a>
 					</p>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p class="text-right"><strong>Agregado por: </strong>{{product.addedBy}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md 12">
+			<div class="col-md-9 col-md-push-3">
+				<div class="page-header text-center">
+					<h2>Comentarios</h2>
+				</div>
+			</div>
+			<div class="col-md-3 col-md-pull-9">
+				<div class="panel panel-default">
+					<div class="panel-heading text-center">
+						<strong>Agregar Comentario</strong>
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label for="starForm">Estrellas <span ng-show="stars" ng-click="stars = 0" class="label label-danger"><span class="glyphicon glyphicon-remove"></span></span></label>
+							<div class="text-center">
+								<span class="star-rating">
+									<input type="radio" name="starForm" value="1" ng-model="stars"><i></i>
+									<input type="radio" name="starForm" value="2" ng-model="stars"><i></i>
+									<input type="radio" name="starForm" value="3" ng-model="stars"><i></i>
+									<input type="radio" name="starForm" value="4" ng-model="stars"><i></i>
+									<input type="radio" name="starForm" value="5" ng-model="stars"><i></i>
+								</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="comment">Comentario</label>
+							<textarea name="comment" id="comment" rows="4" class="form-control"></textarea>
+						</div>
+						<button class="btn btn-block btn-warning">Agregar Comentario</button>
+						<button class="btn btn-block btn-default">Limpiar Campos</button>
+					</div>
 				</div>
 			</div>
 		</div>
