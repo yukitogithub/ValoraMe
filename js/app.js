@@ -26,6 +26,10 @@ valorame.config(['$routeProvider',
 		.when('/search/:query', {
 			templateUrl: 'partials/queryresults.html',
 			controller: 'SearchController'
+		}).
+		when('/view/:id', {
+			templateUrl: 'partials/viewProduct.html',
+			controller: 'ProductController'
 		})
 		.otherwise({
 			redirectTo: '/'

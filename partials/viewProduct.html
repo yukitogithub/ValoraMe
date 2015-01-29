@@ -1,0 +1,23 @@
+<div ng-include="'partials/navbar.html'"></div>
+
+<div class="container container-margin">
+	<!--{{ productId }}-->
+	<div class="col-md-10 col-md-offset-1">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="col-md-8 col-md-push-4">
+					<h2 class="text-center">{{product.name}}</h2>
+					<p><strong>Categoría: </strong>{{product.category}}</p>
+					<p>Estrellas</p>
+					<p class="text-justify"><strong>Descripción: </strong>{{product.description}}</p>
+				</div>
+				<div class="col-md-4 col-md-pull-8">
+					<img ng-src="{{product.img}}" alt="" class="img-responsive img-thumbnail">
+					<p class="text-center">
+						<a ng-repeat="link in product.links" href="{{link.url}}" class="btn btn-link">{{link.title}}</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

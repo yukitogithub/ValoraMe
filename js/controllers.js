@@ -322,6 +322,33 @@ valorameControllers.controller('MainController', ['$scope', function($scope) {
 
 }]);
 
+valorameControllers.controller('ProductController',
+	['$scope', '$routeParams', function($scope, $routeParams) {
+
+	$scope.productId = $routeParams.id;
+
+	$scope.product = {
+		'id' : $scope.productId,
+		'name' : 'Personal',
+		'category' : 'Telefonía',
+		'stars' : 3.2,
+		'description' : 'Una empresa radicada en Argentina, dependiente de Telecom, que provee servicios de telefonía celular a sus clientes. Fundada en 1492, cuando Colón descubrió supuestamente América.',
+		'img' : 'https://oceanoneuronal.files.wordpress.com/2012/06/logo_personal_nuevo.jpg',
+		'links' :
+			[{
+				'title' : 'WEB',
+				'url' : 'http://personal.com.ar'
+			},{
+				'title' : 'Facebook',
+				'url' : 'http://facebook.com/personalargentina'
+			},{
+				'title' : 'Twitter',
+				'url' : 'http://twitter.com/personalar'
+			}]
+	};
+
+	}]);
+
 valorameControllers.controller('SearchController',
 	['$scope', '$routeParams', function($scope, $routeParams) {
 	
