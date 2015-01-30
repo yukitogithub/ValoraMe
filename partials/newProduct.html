@@ -50,8 +50,9 @@
 								</span>
 							</div>
 						</div>
-						<div>
-							<img ng-show="new.img" ng-src="{{new.img}}" class="img-responsive img-thumbnail">
+						<div class="text-center">
+							<p><img ng-show="new.img" ng-src="{{new.img}}" class="img-responsive img-thumbnail" onerror="this.src = './img/noimg.gif'">
+							<img ng-hide="new.img" src="./img/noimg.gif" class="img-responsive img-thumbnail"></p>
 						</div>
 					</div>
 					<div class="col-md-12 text-center">
