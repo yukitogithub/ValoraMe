@@ -22,11 +22,9 @@ body {
 	font-family: 'Lobster', cursive;
 }
 
-.panel-fixed-size-comment {
-	height: 180px;
-}
 
-/* Media Queries para lastComment
+
+/* Media Queries para lastComment (viewProduct.html) y maincomment (main.html)
 
    Solo cuando la vista es tipo desktop, ya que los comentarios
    se dividen en dos columnas, y se desean que sean todos igual
@@ -39,6 +37,10 @@ body {
 		height: 220px;
 	}
 
+	.panel-fixed-size-mainComment {
+		height: 240px;
+	}
+
 }
 
 /* tamaño lg */
@@ -46,6 +48,10 @@ body {
 
 	.panel-fixed-size-lastComment {
 		height: 200px;
+	}
+
+	.panel-fixed-size-mainComment {
+		height: 220px;
 	}
 
 }

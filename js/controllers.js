@@ -302,8 +302,8 @@ valorameControllers.controller('MainController', ['$scope', function($scope) {
 	},
 	{
 		'votated': 'Personal',
-		'comment': 'La verdad que estoy muy disconforme con la compañía. Deja mucho que desear. Sobretodo la conexión!!!',
-		'stars': 2,
+		'comment': 'Recomendado, podría funcionar mejor, o costar menos, pero no me puedo quejar el funcionamiento. Los equipos ofrecidos, de última generación.',
+		'stars': 4,
 		'date': new Date(2015,0,16),
 		'comentator': 'Fernando Luján'
 	},
