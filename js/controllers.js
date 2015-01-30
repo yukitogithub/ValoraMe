@@ -396,6 +396,11 @@ valorameControllers.controller('NewProductController',
 		};
 	};
 
+	$scope.limpiarCampos = function() {
+		$scope.new = {};
+		$scope.imagenLink = "";
+	}
+
 	}]);
 
 valorameControllers.controller('SearchController',
