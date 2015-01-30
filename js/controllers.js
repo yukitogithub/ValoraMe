@@ -19,6 +19,9 @@ valorameControllers.controller('NavbarController', ['$scope' ,'$location', funct
 	{
 		'title': 'Perfil',
 		'link': '/profile'
+	},{
+		'title': 'Nuevo',
+		'link' : '/newproduct'
 	}];
 
 	$scope.isActive = function(route) {
@@ -384,6 +387,13 @@ valorameControllers.controller('ProductController',
 				'date' : new Date (2014, 11, 04)
 			}],
 	};
+
+	}]);
+
+valorameControllers.controller('NewProductController',
+	['$scope', function($scope) {
+
+	// Acá debería ir toda la lógica para agregar un nuevo producto
 
 	}]);
 
