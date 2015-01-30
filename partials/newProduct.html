@@ -2,6 +2,62 @@
 
 <div class="container container-margin">
 	<div class="col-md-12">
-		Ver como armar el formulario de nuevo producto/servicio/empresa...
+		<div class="panel panel-default">
+			<div class="panel-heading text-center">
+				<strong>Nuevo Producto / Servicio /Compañía</strong>	
+			</div>
+			<div class="panel-body">
+				<form id="productForm">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="nombre">Nombre</label>
+							<input type="text" name="nombre" class="form-control" ng-model="new.name" required>
+						</div>
+						<div class="form-group">
+							<label for="categoria">Categoría</label>
+							<select class="form-control" name="categoria" id="productcategoria" ng-model="new.category" required>
+								<option value="">Seleccione una</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="descripcion">Descripción</label>
+							<textarea name="descripcion" id="descripcion" rows="4" class="form-control" ng-model="new.description" required></textarea>
+						</div>
+						<div class="form-group">
+							<label for="links">Enlaces</label>
+							<p><div class="input-group">
+								<span class="input-group-addon" id="formweb">http://www.</span>
+								<input type="text" class="form-control" placeholder="link del sitio web" aria-describedby="formweb" ng-model="new.web">
+							</div></p>
+							<p><div class="input-group">
+								<span class="input-group-addon" id="formfacebook">facebook.com/</span>
+								<input type="text" class="form-control" placeholder="usuario de facebook" aria-describedby="formfacebook" ng-model="new.facebook">
+							</div></p>
+							<p><div class="input-group">
+								<span class="input-group-addon" id="formtwitter">twitter.com/</span>
+								<input type="text" class="form-control" placeholder="usuario de twitter" aria-describedby="formtwitter" ng-model="new.twitter">
+							</div></p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="imagen">Link de Imagen</label>
+							<div class="input-group">
+								<input type="text" name="imagen" class="form-control" ng-model="imagenLink">
+								<span class="input-group-btn">
+									<button type="button" class="btn btn-warning" ng-click="imgButton()"><span class="glyphicon glyphicon-search"></span></button>
+								</span>
+							</div>
+						</div>
+						<div>
+							<img ng-show="new.img" ng-src="{{new.img}}" class="img-responsive img-thumbnail">
+						</div>
+					</div>
+					<div class="col-md-12 text-center">
+						<p><button type="button" class="btn btn-default">Limpiar Campos</button> <button type="submit" class="btn btn-warning">¡Crear!</button></p>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 </div>

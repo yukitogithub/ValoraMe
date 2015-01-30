@@ -17,7 +17,9 @@
 				<div class="col-md-4 col-md-pull-8">
 					<p class="text-center"><img ng-src="{{product.img}}" alt="" class="img-responsive img-thumbnail"></p>
 					<p class="text-center">
-						<a ng-repeat="link in product.links" href="{{link.url}}" class="btn btn-link">{{link.title}}</a>
+						<a ng-show="product.web" href="http://www.{{product.web}}" class="btn btn-link">Sitio WEB</a>
+						<a ng-show="product.facebook" href="http://facebook.com/{{product.facebook}}" class="btn btn-link">Facebook</a>
+						<a ng-show="product.twitter" href="http://twitter.com/{{product.twitter}}" class="btn btn-link">Twitter</a>
 					</p>
 				</div>
 				<div class="row">
@@ -71,7 +73,7 @@
 						</div>
 						<div class="form-group">
 							<label for="comment">Comentario</label>
-							<textarea name="comment" id="comment" rows="4" class="form-control"></textarea>
+							<textarea name="comment" id="comment" rows="4" class="form-control" maxlength="140"></textarea>
 						</div>
 						<button class="btn btn-block btn-warning">Agregar Comentario</button>
 						<button class="btn btn-block btn-default">Limpiar Campos</button>

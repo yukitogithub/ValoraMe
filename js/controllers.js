@@ -343,17 +343,9 @@ valorameControllers.controller('ProductController',
 		'description' : 'Una empresa radicada en Argentina, dependiente de Telecom, que provee servicios de telefonía celular a sus clientes. Fundada en 1492, cuando Colón descubrió supuestamente América.',
 		'addedBy' : 'Cosme Fulanito',
 		'img' : 'https://oceanoneuronal.files.wordpress.com/2012/06/logo_personal_nuevo.jpg',
-		'links' :
-			[{
-				'title' : 'WEB',
-				'url' : 'http://personal.com.ar'
-			},{
-				'title' : 'Facebook',
-				'url' : 'http://facebook.com/personalargentina'
-			},{
-				'title' : 'Twitter',
-				'url' : 'http://twitter.com/personalar'
-			}],
+		'web' : 'personal.com.ar',
+		'facebook' : 'personalargentina',
+		'twitter' : 'personalar',
 		'lastComments' : 
 			[{
 				'stars': 4,
@@ -393,7 +385,16 @@ valorameControllers.controller('ProductController',
 valorameControllers.controller('NewProductController',
 	['$scope', function($scope) {
 
+	$scope.new = {};
+
 	// Acá debería ir toda la lógica para agregar un nuevo producto
+	$scope.imgButton = function() {
+		if ($scope.imagenLink !== "") {
+			$scope.new.img = $scope.imagenLink;
+		} else {
+			$scope.new.img = "";
+		};
+	};
 
 	}]);
 
