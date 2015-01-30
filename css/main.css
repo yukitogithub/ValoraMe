@@ -26,6 +26,34 @@ body {
 	height: 180px;
 }
 
+/* Media Queries para lastComment
+
+   Solo cuando la vista es tipo desktop, ya que los comentarios
+   se dividen en dos columnas, y se desean que sean todos igual
+   de altos. */
+
+/* tamaño md */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+	.panel-fixed-size-lastComment {
+		height: 220px;
+	}
+
+}
+
+/* tamaño lg */
+@media (min-width: 1200px) {
+
+	.panel-fixed-size-lastComment {
+		height: 200px;
+	}
+
+}
+
+/*.panel-fixed-size-lastComment {
+	height: 210px;
+}*/
+
 .panel-fixed-size-product {
 	height: 140px;
 }

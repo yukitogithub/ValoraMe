@@ -327,6 +327,11 @@ valorameControllers.controller('ProductController',
 
 	$scope.productId = $routeParams.id;
 
+	// Ver si last comments se pone junto con el product, o separado...
+	// Yo (Germán) creo que es conveniente que esten separados, así al
+	// agregar un nuevo comentario, se refresquen los comentarios para
+	// que aparezca también el último. 
+
 	$scope.product = {
 		'id' : $scope.productId,
 		'name' : 'Personal',
@@ -345,7 +350,39 @@ valorameControllers.controller('ProductController',
 			},{
 				'title' : 'Twitter',
 				'url' : 'http://twitter.com/personalar'
-			}]
+			}],
+		'lastComments' : 
+			[{
+				'stars': 4,
+				'comment' : 'Tiene alcance en mi ciudad, el 3g mas o menos, pero anda para mandar Whatsapps.',
+				'addedBy' : 'Cosme Fulanito',
+				'date' : new Date (2015, 0, 04)
+			},{
+				'stars': 2,
+				'comment' : 'No anda, encima me cobran mas caro de lo que se pacto al comprar el plan!',
+				'addedBy' : "John Doe",
+				'date' : new Date (2015, 0, 14)
+			},{
+				'stars': 1,
+				'comment' : 'Es basura, sencillamente no sirve.',
+				'addedBy' : "Juan Claro Movistar",
+				'date' : new Date (2015, 0, 11)
+			},{
+				'stars': 5,
+				'comment' : 'The best, no puede haber algo mejor, es expléndido, fantabuloso.',
+				'addedBy' : "Jorge Personal",
+				'date' : new Date (2015, 0, 17)
+			},{
+				'stars': 4,
+				'comment' : 'Recomendado, podría funcionar mejor, o costar menos, pero no me puedo quejar el funcionamiento. Los equipos ofrecidos, de última generación.',
+				'addedBy' : "Esteban Trabajos",
+				'date' : new Date (2014, 11, 30)
+			},{
+				'stars': 3,
+				'comment' : 'Y es lo que hay, podría mejorar, podría ser peor.',
+				'addedBy' : "Guillermo Puertas",
+				'date' : new Date (2014, 11, 04)
+			}],
 	};
 
 	}]);

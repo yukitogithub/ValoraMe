@@ -1,7 +1,6 @@
 <div ng-include="'partials/navbar.html'"></div>
 
 <div class="container container-margin">
-	<!--{{ productId }}-->
 	<div class="col-md-10 col-md-offset-1">
 		<div class="panel panel-default">
 			<div class="panel-body">
@@ -33,7 +32,23 @@
 		<div class="col-md 12">
 			<div class="col-md-9 col-md-push-3">
 				<div class="page-header text-center">
-					<h2>Comentarios</h2>
+					<h2>Últimos Comentarios<a type="button" href="#/comments/{{product.id}}" class="btn btn-warning pull-right">Ver todos</a></h2>
+				</div>
+				<div ng-repeat="comment in product.lastComments | orderBy: '-date'" class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-body panel-fixed-size-lastComment">
+							<p>
+								<div class="star-rating-display-only">
+									<div style="width:{{comment.stars * 20}}%;"></div>
+								</div> <strong>{{comment.stars}}</strong>
+							</p>
+							<p class="text-justify"><strong>Comentario:</strong> {{comment.comment}}</p>
+							<p><strong>Fecha agregado: </strong>{{comment.date | date}}</p>
+						</div>
+						<div class="panel-footer">
+							<strong>Agregado por: </strong>{{comment.addedBy}}
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-3 col-md-pull-9">
