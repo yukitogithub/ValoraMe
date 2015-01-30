@@ -4,7 +4,7 @@
 	<div class="col-md-12">
 		<div class="panel panel-default">
 			<div class="panel-heading text-center">
-				<strong>Nuevo Producto / Servicio /Compañía</strong>	
+				<strong>Nuevo Producto / Servicio / Compañía</strong>	
 			</div>
 			<div class="panel-body">
 				<form name="productForm">
@@ -50,8 +50,14 @@
 								</span>
 							</div>
 						</div>
+						<!-- Alert para el error de imágen no válida -->
+						<div class="alert alert-danger alert-dismissible" role="alert" id="imgNotFoundAlert">
+							<button type="button" class="close" ng-click="hideAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<strong>¡Error!</strong> En enlace no es una imágen válida.
+						</div>
+
 						<div class="text-center">
-							<p><img ng-show="new.img" ng-src="{{new.img}}" class="img-responsive img-thumbnail" onerror="this.src = './img/noimg.gif'">
+							<p><img ng-show="new.img" ng-src="{{new.img}}" class="img-responsive img-thumbnail" onerror="this.src = './img/noimg.gif'" id="newImg">
 							<img ng-hide="new.img" src="./img/noimg.gif" class="img-responsive img-thumbnail"></p>
 						</div>
 					</div>

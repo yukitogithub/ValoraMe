@@ -385,12 +385,24 @@ valorameControllers.controller('ProductController',
 valorameControllers.controller('NewProductController',
 	['$scope', function($scope) {
 
+	$('#imgNotFoundAlert').hide();
+
+	$scope.hideAlert = function () {
+		$('#imgNotFoundAlert').slideUp(50);
+	};
+
 	$scope.new = {};
 
 	// Acá debería ir toda la lógica para agregar un nuevo producto
 	$scope.imgButton = function() {
 		if ($scope.imagenLink !== "") {
 			$scope.new.img = $scope.imagenLink;
+
+			$('#newImg').error(function() {
+				$scope.new.img = "";
+				$('#imgNotFoundAlert').slideDown(50);
+			});
+
 		} else {
 			$scope.new.img = "";
 		};
