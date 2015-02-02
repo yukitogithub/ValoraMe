@@ -50,7 +50,7 @@
 					</div>
 				</div>
 
-				<button class="btn btn-block btn-warning" ng-click="limpiarFiltros()">Limpiar Filtros</button>
+				<button class="btn btn-block btn-primary" ng-click="limpiarFiltros()">Limpiar Filtros</button>
 
 			</div>
 		</div>
@@ -60,7 +60,7 @@
 			<h1>Resultados de <i>{{busqueda}}</i>:</h1>
 		</div>
 		<div class="col-md-6" ng-repeat="item in data.resultados | filter:filtro | filter:greaterThan('stars', stars.min) | filter:lessThan('stars', stars.max) | orderBy: selectOrder : direction">
-			<div class="panel panel-warning">
+			<div class="panel panel-primary">
 				<div class="panel-heading text-center">
 					<h3 class="panel-title">{{item.name}}</h3>
 				</div>
@@ -71,7 +71,7 @@
 						</div> <strong>{{item.stars}}</strong>
 					</p>
 					<p><strong>Categoría: </strong>{{item.categoria}}</p>
-					<p><a class="btn btn-warning btn-sm pull-right" href="#/view/{{item.id}}">Ver Detalles</a></p>
+					<p><a class="btn btn-primary btn-sm pull-right" href="#/view/{{item.id}}">Ver Detalles</a></p>
 				</div>
 			</div>
 		</div>

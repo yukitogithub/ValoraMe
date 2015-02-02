@@ -9,7 +9,7 @@
 				<div class="input-group">
 					<input name="votated" class="form-control" id="votatedForm" type="text" ng-change="select=false;" ng-model="votated" placeholder="Producto/Servicio" required>
 					<span class="input-group-btn">
-						<button ng-click="crearProducto()" class="btn btn-warning" type="button">
+						<button ng-click="crearProducto()" class="btn btn-primary" type="button">
 							<span class="glyphicon glyphicon-plus"></span>
 						</button>
 					</span>
@@ -49,7 +49,7 @@
 				<input class="form-control" id="comentatorForm" type="text" ng-model="comentator" placeholder="Comentarista" required>
 			</div>
 			<div class="form-group">
-				<button ng-disabled="comentarioForm.$invalid" ng-click="agregarComentario()" class="btn btn-warning btn-block">Comentar</button>
+				<button ng-disabled="comentarioForm.$invalid" ng-click="agregarComentario()" class="btn btn-primary btn-block">Comentar</button>
 			</div>
 		</form>
 		<div class="form-group">
@@ -81,7 +81,7 @@
 				<input class="form-control" id="comentatorProductForm" type="text" ng-model="comentator" placeholder="Comentarista" required>
 			</div>
 			<div class="form-group">
-				<button ng-disabled="productoServicioForm.$invalid" ng-click="agregarProducto()" class="btn btn-warning btn-block">Agregar</button>
+				<button ng-disabled="productoServicioForm.$invalid" ng-click="agregarProducto()" class="btn btn-primary btn-block">Agregar</button>
 			</div>
 		</form>
 		<div class="form-group">

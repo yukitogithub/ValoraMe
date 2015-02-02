@@ -22,7 +22,7 @@
 	
 	<!-- Listado de productos en el arreglo -->
 	<div ng-repeat="item in products | filter:search | orderBy:'-date'" class="col-md-6">
-		<div class="panel panel-warning">
+		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<h3 class="panel-title"><strong>Product/Service: </strong>{{item.name}}</h3>
 			</div>
@@ -32,7 +32,7 @@
 			</div>
 			<div class="panel-footer">
 				<footer>
-					<strong>Added by: </strong>{{item.owner}} <button class="btn btn-warning btn-xs pull-right" ng-click="viewComments(item.name)">View Comments</button>
+					<strong>Added by: </strong>{{item.owner}} <button class="btn btn-primary btn-xs pull-right" ng-click="viewComments(item.name)">View Comments</button>
 				</footer>
 			</div>
 		</div>

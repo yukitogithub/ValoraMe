@@ -34,7 +34,7 @@
 		<div class="col-md 12">
 			<div class="col-md-9 col-md-push-3">
 				<div class="page-header text-center">
-					<h2>Últimos Comentarios<a type="button" href="#/comments/{{product.id}}" class="btn btn-warning pull-right">Ver todos</a></h2>
+					<h2>Últimos Comentarios<a type="button" href="#/comments/{{product.id}}" class="btn btn-primary pull-right">Ver todos</a></h2>
 				</div>
 				<div ng-show="newComment.comment" class="col-md-6">
 					<div class="panel panel-danger">
@@ -92,7 +92,7 @@
 								<label for="comment">Comentario</label><span class="pull-right color-grey">{{ 140 - newComment.comment.length}}</span>
 								<textarea name="comment" id="comment" rows="4" class="form-control" maxlength="140" ng-model="newComment.comment" required></textarea>
 							</div>
-							<button type="submit" ng-disabled="newCommentForm.$invalid" class="btn btn-block btn-warning" ng-click="addComment()">Agregar Comentario</button>
+							<button type="submit" ng-disabled="newCommentForm.$invalid" class="btn btn-block btn-primary" ng-click="addComment()">Agregar Comentario</button>
 							<button type="button" ng-click="limpiarCampos()" class="btn btn-block btn-default">Limpiar Campos</button>
 						</form>
 					</div>
