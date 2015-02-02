@@ -31,6 +31,10 @@ valorame.config(['$routeProvider',
 			templateUrl: 'partials/viewProduct.html',
 			controller: 'ProductController'
 		})
+		.when('/comments/:id', {
+			templateUrl: 'partials/viewAllComments.html',
+			controller: 'CommentsController'
+		})
 		/*	Faltaría lo siguiente
 			.when('/comments/:id', {
 				templateUrl: '.....',
