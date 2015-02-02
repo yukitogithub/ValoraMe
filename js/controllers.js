@@ -8,8 +8,10 @@ valorameControllers.controller('NavbarController', ['$scope' ,'$location', funct
 	$scope.navbarBuscar = '';
 
 	$scope.buscar = function() {
-		window.location.href = "#/search/" + $scope.navbarBuscar;
-		$scope.navbarBuscar = '';
+		if ($scope.navbarBuscar != '') {
+			window.location.href = "#/search/" + $scope.navbarBuscar;
+			$scope.navbarBuscar = '';
+		}
 	};
 
 	$scope.menu = [{
