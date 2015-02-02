@@ -130,3 +130,7 @@ ul.nav.nav-pills > li {
 .navbar li {
 	font-weight: bold;
 }
+
+.panel p {
+	word-wrap:break-word;
+}
