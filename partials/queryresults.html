@@ -1,8 +1,31 @@
 <div ng-include="'partials/navbar.html'"></div>
 
 <div class="container container-margin">
-	<div class="col-md-3">
-		<div class="panel panel-default">
+	
+	<div class="col-md-9 col-md-push-3">
+		<div class="page-header">
+			<h1>Resultados de <i>{{busqueda}}</i>:</h1>
+		</div>
+		<div class="col-md-6" ng-repeat="item in data.resultados | filter:filtro | filter:greaterThan('stars', stars.min) | filter:lessThan('stars', stars.max) | orderBy: selectOrder : direction">
+			<div class="panel panel-primary">
+				<div class="panel-heading text-center">
+					<h3 class="panel-title">{{item.name}}</h3>
+				</div>
+				<div class="panel-body">
+					<p>
+						<div class="star-rating-display-only">
+							<div style="width:{{item.stars * 20}}%;"></div>
+						</div> <strong>{{item.stars}}</strong>
+					</p>
+					<p><strong>Categoría: </strong>{{item.categoria}}</p>
+					<p><a class="btn btn-primary btn-sm pull-right" href="#/view/{{item.id}}">Ver Detalles</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-md-3 col-md-pull-9">
+		<div class="panel panel-primary">
 			<div class="panel-heading text-center">
 				Filtros de búsqueda
 			</div>
@@ -55,25 +78,5 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-9">
-		<div class="page-header">
-			<h1>Resultados de <i>{{busqueda}}</i>:</h1>
-		</div>
-		<div class="col-md-6" ng-repeat="item in data.resultados | filter:filtro | filter:greaterThan('stars', stars.min) | filter:lessThan('stars', stars.max) | orderBy: selectOrder : direction">
-			<div class="panel panel-primary">
-				<div class="panel-heading text-center">
-					<h3 class="panel-title">{{item.name}}</h3>
-				</div>
-				<div class="panel-body">
-					<p>
-						<div class="star-rating-display-only">
-							<div style="width:{{item.stars * 20}}%;"></div>
-						</div> <strong>{{item.stars}}</strong>
-					</p>
-					<p><strong>Categoría: </strong>{{item.categoria}}</p>
-					<p><a class="btn btn-primary btn-sm pull-right" href="#/view/{{item.id}}">Ver Detalles</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 </div>

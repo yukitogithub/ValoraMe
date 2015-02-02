@@ -2,7 +2,7 @@
 
 <div class="container container-margin">
 	<div class="col-md-10 col-md-offset-1">
-		<div class="panel panel-default">
+		<div class="panel panel-primary">
 			<div class="panel-body">
 				<div class="col-md-8 col-md-push-4">
 					<h1 class="text-center">{{product.name}}</h1>
@@ -53,7 +53,7 @@
 					</div>
 				</div>
 				<div ng-repeat="comment in product.lastComments | orderBy: '-date'" class="col-md-6">
-					<div class="panel panel-default">
+					<div class="panel panel-primary">
 						<div class="panel-body panel-fixed-size-lastComment">
 							<p>
 								<div class="star-rating-display-only">
@@ -70,7 +70,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 col-md-pull-9">
-				<div class="panel panel-default">
+				<div class="panel panel-primary">
 					<div class="panel-heading text-center">
 						<strong>Agregar Comentario</strong>
 					</div>

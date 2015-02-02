@@ -1,19 +1,7 @@
 <div ng-include="'partials/navbar.html'"></div>
 
 <div class="container container-margin">
-	<div class="col-md-3">
-		<div class="panel panel-default">
-			<div class="panel-heading text-center">
-				Acciones
-			</div>
-			<div class="panel-body">
-				<p><button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#editar-datos" ng-click="iniciarEditarForm()">Editar Datos</button></p>
-				<p><a class="btn btn-default btn-block" href="">Cambiar Contraseña</a></p>
-				<p><a class="btn btn-danger btn-block" href="">Cerrar Cuenta</a></p>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-9">
+	<div class="col-md-9 col-md-push-3">
 		<ul class="nav nav-pills">
 			<li role="presentation" ng-class="{'active':pillPrincipal}"><a ng-click="pillPrincipal = true">Principal</a></li>
 			<li role="presentation" ng-class="{'active': !pillPrincipal}"><a ng-click="pillPrincipal = false">Información Secundaria</a></li>
@@ -65,6 +53,18 @@
 						<p class="list-group-item-text">asfdsa</p>
 					</li>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3 col-md-pull-9">
+		<div class="panel panel-primary">
+			<div class="panel-heading text-center">
+				<strong>Acciones</strong>
+			</div>
+			<div class="panel-body">
+				<p><button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#editar-datos" ng-click="iniciarEditarForm()">Editar Datos</button></p>
+				<p><a class="btn btn-default btn-block" href="">Cambiar Contraseña</a></p>
+				<p><a class="btn btn-primary btn-block" href="">Cerrar Cuenta</a></p>
 			</div>
 		</div>
 	</div>

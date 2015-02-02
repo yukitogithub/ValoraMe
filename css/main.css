@@ -120,4 +120,13 @@ div.col-margin-15 {
 
 ul.nav.nav-pills > li {
 	cursor: pointer;
+	font-weight: bold;
+}
+
+.btn {
+	font-weight: bold;
+}
+
+.navbar li {
+	font-weight: bold;
 }
