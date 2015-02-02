@@ -117,3 +117,7 @@ div.col-margin-15 {
 .nocolor-alink:hover{
 	text-shadow: 0px 0px 1px #555;
 }
+
+ul.nav.nav-pills > li {
+	cursor: pointer;
+}
