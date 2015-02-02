@@ -338,10 +338,17 @@ valorameControllers.controller('ProductController',
 
 	$scope.productId = $routeParams.id;
 
-	$scope.newComment = {};
+	$scope.initComment = function() {
+		$scope.newComment = {};
+		$scope.newComment.date = new Date();
+		//acá debería obtener el usuario activo
+		$scope.newComment.addedBy = 'John Doe';
+	};
+
+	$scope.initComment();
 
 	$scope.limpiarCampos = function() {
-		$scope.newComment = {};
+		$scope.initComment();
 	};
 
 	// Ver si last comments se pone junto con el product, o separado...
@@ -392,6 +399,11 @@ valorameControllers.controller('ProductController',
 				'addedBy' : "Guillermo Puertas",
 				'date' : new Date (2014, 11, 04)
 			}],
+	};
+
+	$scope.addComment = function() {
+		$scope.product.lastComments.push($scope.newComment);
+		$scope.initComment();
 	};
 
 	}]);
