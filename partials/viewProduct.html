@@ -59,24 +59,26 @@
 						<strong>Agregar Comentario</strong>
 					</div>
 					<div class="panel-body">
-						<div class="form-group">
-							<label for="starForm">Estrellas <span ng-show="stars" ng-click="stars = 0" class="label label-danger"><span class="glyphicon glyphicon-remove"></span></span></label>
-							<div class="text-center">
-								<span class="star-rating">
-									<input type="radio" name="starForm" value="1" ng-model="stars"><i></i>
-									<input type="radio" name="starForm" value="2" ng-model="stars"><i></i>
-									<input type="radio" name="starForm" value="3" ng-model="stars"><i></i>
-									<input type="radio" name="starForm" value="4" ng-model="stars"><i></i>
-									<input type="radio" name="starForm" value="5" ng-model="stars"><i></i>
-								</span>
+						<form name="newCommentForm">
+							<div class="form-group">
+								<label for="starForm">Estrellas <span ng-show="newComment.stars" ng-click="newComment.stars = 0" class="label label-danger"><span class="glyphicon glyphicon-remove"></span></span></label>
+								<div class="text-center">
+									<span class="star-rating">
+										<input type="radio" name="starForm" value="1" ng-model="newComment.stars"><i></i>
+										<input type="radio" name="starForm" value="2" ng-model="newComment.stars"><i></i>
+										<input type="radio" name="starForm" value="3" ng-model="newComment.stars"><i></i>
+										<input type="radio" name="starForm" value="4" ng-model="newComment.stars"><i></i>
+										<input type="radio" name="starForm" value="5" ng-model="newComment.stars"><i></i>
+									</span>
+								</div>
 							</div>
-						</div>
-						<div class="form-group">
-							<label for="comment">Comentario</label>
-							<textarea name="comment" id="comment" rows="4" class="form-control" maxlength="140"></textarea>
-						</div>
-						<button class="btn btn-block btn-warning">Agregar Comentario</button>
-						<button class="btn btn-block btn-default">Limpiar Campos</button>
+							<div class="form-group">
+								<label for="comment">Comentario</label><span class="pull-right color-grey">{{ 140 - newComment.comment.length}}</span>
+								<textarea name="comment" id="comment" rows="4" class="form-control" maxlength="140" ng-model="newComment.comment" required></textarea>
+							</div>
+							<button type="submit" ng-disabled="newCommentForm.$invalid" class="btn btn-block btn-warning">Agregar Comentario</button>
+							<button type="button" ng-click="limpiarCampos()" class="btn btn-block btn-default">Limpiar Campos</button>
+						</form>
 					</div>
 				</div>
 			</div>

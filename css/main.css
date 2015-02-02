@@ -102,3 +102,7 @@ div.col-margin-15 {
 .angular-google-map-container {
 	height: 400px;
 }
+
+.color-grey {
+	color: gray;
+}

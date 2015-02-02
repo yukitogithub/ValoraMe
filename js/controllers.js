@@ -330,6 +330,12 @@ valorameControllers.controller('ProductController',
 
 	$scope.productId = $routeParams.id;
 
+	$scope.newComment = {};
+
+	$scope.limpiarCampos = function() {
+		$scope.newComment = {};
+	};
+
 	// Ver si last comments se pone junto con el product, o separado...
 	// Yo (Germán) creo que es conveniente que esten separados, así al
 	// agregar un nuevo comentario, se refresquen los comentarios para
