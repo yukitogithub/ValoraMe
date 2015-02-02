@@ -411,7 +411,58 @@ valorameControllers.controller('NewProductController',
 	$scope.limpiarCampos = function() {
 		$scope.new = {};
 		$scope.imagenLink = "";
-	}
+	};
+
+	$scope.categorias = [
+	{
+		'title' : 'Electrónicos'
+	},
+	{
+		'title' : 'Servicios de Medicina'
+	},
+	{
+		'title' : 'Restaurants'
+	},
+	{
+		'title' : 'Alimentos'
+	},
+	{
+		'title' : 'Telefonía'
+	},
+	{
+		'title' : 'Supermercados'
+	},
+	{
+		'title' : 'Hoteles y Hospedajes'
+	},
+	{
+		'title' : 'Atracciones Turísticas'
+	},
+	{
+		'title' : 'Entretenimiento'
+	},
+	{
+		'title' : 'Transporte'
+	},
+	{
+		'title' : 'Vehículos'
+	},
+	{
+		'title' : 'Informática'
+	},
+	{
+		'title' : 'Construcción'
+	},
+	{
+		'title' : 'Vestimenta'
+	},
+	{
+		'title' : 'Redes Sociales'
+	},
+	{
+		'title' : 'Sitios Web'
+	},
+	];
 
 	}]);
 

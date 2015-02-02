@@ -17,7 +17,7 @@
 							<label for="categoria">Categoría</label>
 							<select class="form-control" name="categoria" id="productcategoria" ng-model="new.category" required>
 								<option value="">Seleccione una</option>
-								<option value="Prueba">Borrar Luego</option>
+								<option ng-repeat="cat in categorias | orderBy:'title'" value="{{cat.title}}">{{cat.title}}</option>
 							</select>
 						</div>
 						<div class="form-group">
@@ -53,7 +53,7 @@
 						<!-- Alert para el error de imágen no válida -->
 						<div class="alert alert-danger alert-dismissible" role="alert" id="imgNotFoundAlert">
 							<button type="button" class="close" ng-click="hideAlert()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<strong>¡Error!</strong> En enlace no es una imágen válida.
+							<strong>¡Error!</strong> El enlace no es una imágen válida.
 						</div>
 
 						<div class="text-center">
