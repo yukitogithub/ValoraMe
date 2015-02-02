@@ -283,6 +283,7 @@ valorameControllers.controller('MainController', ['$scope', function($scope) {
 
 	$scope.lastComments = [{
 		'votated': 'Personal',
+		'votatedId' : 234,
 		'comment': 'La verdad que estoy muy disconforme con la compañía. Deja mucho que desear. Sobretodo la conexión!!!',
 		'stars': 1,
 		'date': new Date(2015,0,16),
@@ -290,6 +291,7 @@ valorameControllers.controller('MainController', ['$scope', function($scope) {
 	},
 	{
 		'votated': 'Dell',
+		'votatedId' : 123,
 	 	'comment': 'Realmente no lo recomiendo, tuve una y terminé quemándola. Ahora es un pisapapeles caro',
 	 	'stars': 2,
 	 	'date': new Date(2015,0,14),
@@ -297,6 +299,7 @@ valorameControllers.controller('MainController', ['$scope', function($scope) {
 	},
 	{
 		'votated': 'Coca Cola',
+		'votatedId' : 25,
 	 	'comment': 'Altamente recomendada, sobretodo cuando hace calor',
 	 	'stars': 4,
 	 	'date': new Date(2015,0,10),
@@ -304,6 +307,7 @@ valorameControllers.controller('MainController', ['$scope', function($scope) {
 	},
 	{
 		'votated': 'Personal',
+		'votatedId' : 53,
 		'comment': 'Recomendado, podría funcionar mejor, o costar menos, pero no me puedo quejar el funcionamiento. Los equipos ofrecidos, de última generación.',
 		'stars': 4,
 		'date': new Date(2015,0,16),
@@ -311,6 +315,7 @@ valorameControllers.controller('MainController', ['$scope', function($scope) {
 	},
 	{
 		'votated': 'Dell',
+		'votatedId' : 633,
 	 	'comment': 'Realmente no lo recomiendo, tuve una y terminé quemándola. Ahora es un pisapapeles caro',
 	 	'stars': 3,
 	 	'date': new Date(2015,0,14),
@@ -318,6 +323,7 @@ valorameControllers.controller('MainController', ['$scope', function($scope) {
 	},
 	{
 		'votated': 'Coca Cola',
+		'votatedId' : 25,
 	 	'comment': 'Altamente recomendada, sobretodo cuando hace calor',
 	 	'stars': 5,
 	 	'date': new Date(2015,0,10),
@@ -405,7 +411,8 @@ valorameControllers.controller('NewProductController',
 	$scope.imgButton = function() {
 		if ($scope.imagenLink !== "") {
 			$scope.new.img = $scope.imagenLink;
-
+			$('#imgNotFoundAlert').slideUp(50);
+			
 			$('#newImg').error(function() {
 				$scope.new.img = "";
 				$('#imgNotFoundAlert').slideDown(50);

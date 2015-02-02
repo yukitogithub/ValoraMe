@@ -1,5 +1,5 @@
 function portadaIngresar() {
-	window.location.href = "#/listado";
+	window.location.href = "#/index";
 	$('body').removeClass("modal-open");
 };
 

@@ -46,7 +46,7 @@
 		<div ng-repeat="item in lastComments | orderBy:'-date'" class="col-md-6">
 			<div class="panel panel-warning">
 				<div class="panel-heading">
-					<h3 class="panel-title"><strong>Product/Service: </strong>{{item.votated}}</h3>
+					<a class="nocolor-alink" href="#/view/{{item.votatedId}}"><h3 class="panel-title"><strong>Product/Service: </strong>{{item.votated}}</h3></a>
 				</div>
 				<div class="panel-body panel-fixed-size-mainComment">
 					<p>
@@ -55,6 +55,8 @@
 						</div> <strong>{{item.stars}}</strong>
 					</p>
 					<p><strong>Comment: </strong>{{item.comment}}</p>
+				</div>
+				<div class="panel-body">
 					<p><strong>Date: </strong>{{item.date | date}}</p>
 				</div>
 				<div class="panel-footer"><footer><strong>Comentador: </strong>{{item.comentator}}</footer></div>
