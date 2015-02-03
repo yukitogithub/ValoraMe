@@ -141,3 +141,7 @@ ul.nav.nav-pills > li {
 .panel p {
 	word-wrap:break-word;
 }
+
+.page-header {
+	border-color: #48C9B0;
+}
