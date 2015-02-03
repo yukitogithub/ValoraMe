@@ -615,7 +615,8 @@ valorameControllers.controller('CommentsController',['$scope', '$routeParams', f
 	};
 
 	//inicialización del orden del filtro
-	$scope.selectOrder = "name";
+	$scope.selectOrder = "date";
+	$scope.direction = "reverse";
 
 	//inicialización del filtro de estrellas
 	$scope.stars = {};
@@ -685,5 +686,5 @@ valorameControllers.controller('CommentsController',['$scope', '$routeParams', f
 				'date' : new Date (2014, 11, 04)
 			}],
 	};
-	
+
 }]);

@@ -35,7 +35,7 @@
 						</div>
 					</div>
 				</div>
-				<div ng-repeat="comment in product.comments | orderBy: '-date'" class="col-md-12">
+				<div ng-repeat="comment in product.comments | filter:filtro | filter:greaterThan('stars', stars.min) | filter:lessThan('stars', stars.max) | orderBy: selectOrder : direction" class="col-md-12">
 					<div class="panel panel-primary">
 						<div class="panel-body">
 							<p>
@@ -90,7 +90,7 @@
 						<div class="form-group">
 							<label for="order">Ordenar Por</label>
 							<select name="order" id="order" class="form-control" ng-model="selectOrder">
-								<option value="name">Nombre</option>
+								<option value="date">Date</option>
 								<option value="stars">Estrellas</option>
 							</select>
 							<div class="form-group text-center">
