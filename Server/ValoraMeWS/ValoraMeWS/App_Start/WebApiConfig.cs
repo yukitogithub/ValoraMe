@@ -13,6 +13,9 @@ namespace ValoraMeWS
         public static void Register(HttpConfiguration config)
         {
             // Configuración y servicios de Web API
+
+            //For allow CORS
+            config.EnableCors();
             // Configure Web API para usar solo la autenticación de token de portador.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
@@ -25,6 +28,10 @@ namespace ValoraMeWS
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //For returning JSON instead of xml
+            var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
+            config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
         }
     }
 }
