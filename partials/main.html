@@ -2,7 +2,7 @@
 
 <div class="container container-margin">
 	<div class="col-md-2">
-		<div class="page-header">
+		<div class="page-header fixed-height">
 			<h3 class="text-center">Mejores Productos</h3>
 		</div>
 		<div class="row" ng-repeat="item in bestProducts | orderBy:'-avg'">
@@ -21,7 +21,7 @@
 	</div>
 
 	<div class="col-md-2 col-md-push-8">
-		<div class="page-header">
+		<div class="page-header fixed-height">
 			<h3 class="text-center">Peores Productos</h3>
 		</div>
 		<div class="row" ng-repeat="item in worstProducts | orderBy:'avg'">
@@ -40,8 +40,8 @@
 	</div>
 
 	<div class="col-md-8 col-md-pull-2">
-	<div class="page-header">
-		<h2 class="text-center">Últimos Comentarios</h2>
+	<div class="page-header fixed-height">
+		<h1 class="text-center">Últimos Comentarios</h1>
 	</div>
 		<div ng-repeat="item in lastComments | orderBy:'-date'" class="col-md-6">
 			<div class="panel panel-primary">

@@ -41,6 +41,9 @@ body {
 		height: 180px;
 	}
 
+	.page-header.fixed-height {
+		height: 75px;
+	}
 }
 
 /* tamaño lg */
@@ -52,6 +55,10 @@ body {
 
 	.panel-fixed-size-mainComment {
 		height: 160px;
+	}
+
+	.page-header.fixed-height {
+		height: 75px;
 	}
 
 }
