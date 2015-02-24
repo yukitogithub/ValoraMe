@@ -203,7 +203,15 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\CategoriesLocalController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
+    <Compile Include="Controllers\CommentsLocalController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ProductsLocalController.cs" />
+    <Compile Include="Controllers\SocialsController.cs" />
+    <Compile Include="Controllers\SocialsLocalController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -248,6 +256,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Models\ClassDiagram1.cd" />
+    <None Include="Properties\PublishProfiles\ValoraMePublicProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -275,6 +285,27 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\ProductsLocal\Create.cshtml" />
+    <Content Include="Views\ProductsLocal\Delete.cshtml" />
+    <Content Include="Views\ProductsLocal\Details.cshtml" />
+    <Content Include="Views\ProductsLocal\Edit.cshtml" />
+    <Content Include="Views\ProductsLocal\Index.cshtml" />
+    <Content Include="Views\CategoriesLocal\Create.cshtml" />
+    <Content Include="Views\CategoriesLocal\Delete.cshtml" />
+    <Content Include="Views\CategoriesLocal\Details.cshtml" />
+    <Content Include="Views\CategoriesLocal\Edit.cshtml" />
+    <Content Include="Views\CategoriesLocal\Index.cshtml" />
+    <Content Include="Views\CommentsLocal\Create.cshtml" />
+    <Content Include="Views\CommentsLocal\Delete.cshtml" />
+    <Content Include="Views\CommentsLocal\Details.cshtml" />
+    <Content Include="Views\CommentsLocal\Edit.cshtml" />
+    <Content Include="Views\CommentsLocal\Index.cshtml" />
+    <Content Include="Views\SocialsLocal\Create.cshtml" />
+    <Content Include="Views\SocialsLocal\Delete.cshtml" />
+    <Content Include="Views\SocialsLocal\Details.cshtml" />
+    <Content Include="Views\SocialsLocal\Edit.cshtml" />
+    <Content Include="Views\SocialsLocal\Index.cshtml" />
+    <Content Include="Views\Shared\_Comments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
