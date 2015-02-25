@@ -236,7 +236,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>02/03/2015 11:57:08</publishTime>
     </File>
     <File Include="bin/ValoraMeWS.dll">
-      <publishTime>02/24/2015 00:39:32</publishTime>
+      <publishTime>02/24/2015 20:59:37</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>02/03/2015 11:57:17</publishTime>

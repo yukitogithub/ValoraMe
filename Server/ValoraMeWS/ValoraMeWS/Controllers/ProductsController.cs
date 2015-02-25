@@ -87,29 +87,30 @@ namespace ValoraMeWS.Controllers
 
         // POST: api/Products
         [ResponseType(typeof(Product))]
-        public IHttpActionResult PostProduct(Product product, ICollection<Social> socials)
+        //public IHttpActionResult PostProduct(Product product, ICollection<Social> socials)
+        public IHttpActionResult PostProduct(ProductRequest productRequest)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            product.Stars = 0;
-            var category = db.Categories.FirstOrDefault(x => x.Id == product.CategoryId);
+            productRequest.Product.Stars = 0;
+            var category = db.Categories.FirstOrDefault(x => x.Id == productRequest.Product.CategoryId);
             if (category == null)
             {
                 return BadRequest(ModelState);
             }
-            product.Category = category;
-            product.Links = new List<Social>();
-            foreach (var social in socials)
+            productRequest.Product.Category = category;
+            productRequest.Product.Links = new List<Social>();
+            foreach (var social in productRequest.Socials)
             {
                 db.Socials.Add(social);
-                product.Links.Add(social);
+                productRequest.Product.Links.Add(social);
             }
-            db.Products.Add(product);
+            db.Products.Add(productRequest.Product);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = product.Id }, product);
+            return CreatedAtRoute("DefaultApi", new { id = productRequest.Product.Id }, productRequest.Product);
         }
 
         // DELETE: api/Products/5
