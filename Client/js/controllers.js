@@ -8,7 +8,7 @@ valorameControllers.controller('NavbarController', ['$scope' ,'$location', funct
 	$scope.navbarBuscar = '';
 
 	$scope.buscar = function() {
-		if ($scope.navbarBuscar != '') {
+		if ($scope.navbarBuscar !== '') {
 			window.location.href = "#/search/" + $scope.navbarBuscar;
 			$scope.navbarBuscar = '';
 		}
@@ -119,13 +119,13 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 			'description': $scope.description,
 			'date': $scope.productDate,
 			'owner': $scope.comentator
-		}
+		};
 
 		$scope.products.push(nuevoProducto);
 
 		$scope.volveraComentario();
 		$scope.votated = nuevoProducto.name;
-	}
+	};
 
 	$scope.criteria = "Any";
 
@@ -135,20 +135,20 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 		$scope.stars = 0;
 		$scope.date = '';
 		$scope.comentator = '';
-	}
+	};
 
 	$scope.select = false;
 	$scope.selected = function(){
 		$scope.votated = $(this)[0].item.name;
 		$scope.select = true;
- 	}
+ 	};
 
  	$scope.crearProducto = function(){
  		$("#comentarioForm").hide();
  		$("#productoForm").show();
  		$scope.newVotated = $scope.votated;
- 		$scope.radioSearch = 'products'
- 	}
+ 		$scope.radioSearch = 'products';
+ 	};
 
  	$scope.limpiarProducto = function() {
 		$scope.newVotated = '';
@@ -156,7 +156,7 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
 		$scope.description = '';
 		$scope.productDate = '';
 		$scope.comentator = '';
-	}
+	};
 
 	$scope.volveraComentario = function(){
  		$("#productoForm").hide();
@@ -165,7 +165,7 @@ valorameControllers.controller('ListadoController',['$scope', function($scope){
  		$scope.newVotated = '';
  		$scope.description = '';
 		$scope.productDate = '';
- 	}
+ 	};
 
  	$scope.radioSearch = 'comments';
 
@@ -281,6 +281,13 @@ valorameControllers.controller('MainController', ['$scope', function($scope) {
 		'comments': 2834147
 	}];
 
+	/*
+	$http.get('http://www.axionline.net/labs/valorame/api/lastComments')
+	.success(function (data) {
+		$scope.lastComments = data;
+	});
+	*/
+
 	$scope.lastComments = [{
 		'votated': 'Personal',
 		'votatedId' : 234,
@@ -334,9 +341,25 @@ valorameControllers.controller('MainController', ['$scope', function($scope) {
 }]);
 
 valorameControllers.controller('ProductController',
-	['$scope', '$routeParams', function($scope, $routeParams) {
+	['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+
+	$scope.error = false;
 
 	$scope.productId = $routeParams.id;
+
+	$http.get('http://www.axionline.net/labs/valorame/api/products/' + $scope.productId)
+	.success(function (data){
+
+		$scope.error = false;
+		$scope.product = data;
+
+	})
+	.error(function (data, status) {
+
+		$scope.error = true;
+		$scope.status = status;
+
+	});
 
 	$scope.initComment = function() {
 		$scope.newComment = {};
@@ -356,7 +379,7 @@ valorameControllers.controller('ProductController',
 	// agregar un nuevo comentario, se refresquen los comentarios para
 	// que aparezca también el último. 
 
-	$scope.product = {
+	/*$scope.product = {
 		'id' : $scope.productId,
 		'name' : 'Personal',
 		'category' : 'Telefonía',
@@ -399,17 +422,35 @@ valorameControllers.controller('ProductController',
 				'addedBy' : "Guillermo Puertas",
 				'date' : new Date (2014, 11, 04)
 			}],
-	};
+	};*/
 
 	$scope.addComment = function() {
-		$scope.product.lastComments.push($scope.newComment);
+
+		var objetoPost = {
+			'Stars' : $scope.newComment.stars,
+			'Opinion' : $scope.newComment.comment,
+			'Date' : new Date()
+		};
+
+		var headerconfig = {
+			headers: {
+				'Content-Type':'application/json; charset=utf8'
+			}
+		};
+
+		$http.post('http://www.axionline.net/labs/valorame/api/Comments?productid=' + $scope.productId, objetoPost, headerconfig)
+		.success(function(data){
+			$scope.product.Comments.push(data);
+			console.log(data);
+		});
+
 		$scope.initComment();
 	};
 
 	}]);
 
 valorameControllers.controller('NewProductController',
-	['$scope', function($scope) {
+	['$scope', '$http', function($scope, $http) {
 
 	$('#imgNotFoundAlert').hide();
 
@@ -432,7 +473,7 @@ valorameControllers.controller('NewProductController',
 
 		} else {
 			$scope.new.img = "";
-		};
+		}
 	};
 
 	$scope.limpiarCampos = function() {
@@ -440,56 +481,49 @@ valorameControllers.controller('NewProductController',
 		$scope.imagenLink = "";
 	};
 
-	$scope.categorias = [
-	{
-		'title' : 'Electrónicos'
-	},
-	{
-		'title' : 'Servicios de Medicina'
-	},
-	{
-		'title' : 'Restaurants'
-	},
-	{
-		'title' : 'Alimentos'
-	},
-	{
-		'title' : 'Telefonía'
-	},
-	{
-		'title' : 'Supermercados'
-	},
-	{
-		'title' : 'Hoteles y Hospedajes'
-	},
-	{
-		'title' : 'Atracciones Turísticas'
-	},
-	{
-		'title' : 'Entretenimiento'
-	},
-	{
-		'title' : 'Transporte'
-	},
-	{
-		'title' : 'Vehículos'
-	},
-	{
-		'title' : 'Informática'
-	},
-	{
-		'title' : 'Construcción'
-	},
-	{
-		'title' : 'Vestimenta'
-	},
-	{
-		'title' : 'Redes Sociales'
-	},
-	{
-		'title' : 'Sitios Web'
-	},
-	];
+	$http.get('http://www.axionline.net/labs/valorame/api/categories').success(function(data){
+
+		$scope.categorias = data;
+
+	});
+
+	$scope.crearProducto = function() {
+
+		var objetoPost = {
+			product: {
+				Name : $scope.new.name,
+				Description : $scope.new.description,
+				ImageUrl : $scope.new.img,
+				CategoryId: $scope.new.category
+			},
+			socials: [
+				{
+					Name : 'Website',
+					Link : 'http://www.' + $scope.new.web
+				},
+				{
+					Name : 'Facebook',
+					Link : 'http://www.facebook.com/' + $scope.new.facebook
+				},
+				{
+					Name : 'Twitter',
+					Link : 'http://www.twitter.com/' + $scope.new.twitter
+				}
+			]
+		};
+
+		var headerconfig = {
+			headers: {
+				'Content-Type':'application/json; charset=utf8'
+			}
+		};
+
+		$http.post('http://www.axionline.net/labs/valorame/api/products', objetoPost, headerconfig)
+		.success(function(data){
+			$scope.limpiarCampos();
+			console.log(data);
+		});
+	};
 
 	}]);
 

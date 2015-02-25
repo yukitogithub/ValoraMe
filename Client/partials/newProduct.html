@@ -7,7 +7,7 @@
 				<strong>Nuevo Producto / Servicio / Compañía</strong>	
 			</div>
 			<div class="panel-body">
-				<form name="productForm">
+				<form name="productForm" ng-submit="crearProducto()">
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="nombre">Nombre</label>
@@ -17,7 +17,7 @@
 							<label for="categoria">Categoría</label>
 							<select class="form-control" name="categoria" id="productcategoria" ng-model="new.category" required>
 								<option value="">Seleccione una</option>
-								<option ng-repeat="cat in categorias | orderBy:'title'" value="{{cat.title}}">{{cat.title}}</option>
+								<option ng-repeat="cat in categorias | orderBy:'Name'" value="{{cat.Id}}">{{cat.Name}}</option>
 							</select>
 						</div>
 						<div class="form-group">
