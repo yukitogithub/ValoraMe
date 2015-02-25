@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace ValoraMeWS.Models
 {
@@ -9,14 +10,13 @@ namespace ValoraMeWS.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public virtual int CategoryId { get; set; }
+        public virtual Category Category { get; set; }
         public float Stars { get; set; }
         public string Description { get; set; }
-        public int UserId { get; set; }
         public ApplicationUser User { get; set; }
         public string ImageUrl { get; set; }
-        public List<Social> Links { get; set; }
-        public List<Comment> Comments { get; set; }
+        public virtual List<Social> Links { get; set; }
+        public virtual List<Comment> Comments { get; set; }
     }
 }

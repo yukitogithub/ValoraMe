@@ -21,13 +21,19 @@ namespace ValoraMeWS.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ValorameConnection", throwIfV1Schema: false)
         {
+            this.Configuration.LazyLoadingEnabled = true;
         }
         
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Product> Products { get; set; }
+        public System.Data.Entity.DbSet<Category> Categories { get; set; }
+        public System.Data.Entity.DbSet<Comment> Comments { get; set; }
+        public System.Data.Entity.DbSet<Social> Socials { get; set; }
     }
 }
