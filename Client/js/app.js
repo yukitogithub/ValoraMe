@@ -16,6 +16,7 @@ valorame.config(['$routeProvider',
 			templateUrl: 'partials/main.html',
 			controller: 'MainController'
 		})
+		//se deberia eliminar listado
 		.when('/listado', {
 			templateUrl: 'partials/listado.html',
 			controller: 'ListadoController'
