@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using System.Web.Http.Cors;
 
 namespace ValoraMeWS
 {
@@ -15,7 +16,9 @@ namespace ValoraMeWS
             // Configuración y servicios de Web API
 
             //For allow CORS
-            config.EnableCors();
+            //Enable CORS for all origins, all headers, all methods
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
             // Configure Web API para usar solo la autenticación de token de portador.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
