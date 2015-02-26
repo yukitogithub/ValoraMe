@@ -1,102 +1,111 @@
 <div ng-include="'partials/navbar.html'"></div>
 
-<div class="container container-margin">
-	<div class="col-md-10 col-md-offset-1">
-		<div class="panel panel-primary">
-			<div class="panel-body">
-				<div class="col-md-8 col-md-push-4">
-					<h1 class="text-center">{{product.name}}</h1>
-					<p><strong>Categoría: </strong>{{product.category}}</p>
-					<p>
-						<div class="star-rating-display-only">
-							<div style="width:{{product.stars * 20}}%;"></div>
-						</div> <strong>{{product.stars}}</strong>
-					</p>
-					<p class="text-justify"><strong>Descripción: </strong>{{product.description}}</p>
+<div ng-hide="error">
+	<div class="container container-margin">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<div class="col-md-8 col-md-push-4">
+						<h1 class="text-center">{{product.Name}}</h1>
+						<p><strong>Categoría: </strong>{{product.Category.Name}}</p>
+						<p>
+							<div class="star-rating-display-only">
+								<div style="width:{{product.Stars * 20}}%;"></div>
+							</div> <strong>{{product.Stars | number: 1 }}</strong>
+						</p>
+						<p class="text-justify"><strong>Descripción: </strong>{{product.Description}}</p>
+					</div>
+					<div class="col-md-4 col-md-pull-8">
+						<p class="text-center"><img ng-src="{{product.ImageUrl}}" alt="" class="img-responsive img-thumbnail"></p>
+						<p class="text-center">
+							<a ng-repeat="link in product.Links" href="{{link.Link}}" class="btn btn-link">{{link.Name}}</a>
+						</p>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-right"><strong>Agregado por: </strong>{{product.User.UserName}}</p>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-4 col-md-pull-8">
-					<p class="text-center"><img ng-src="{{product.img}}" alt="" class="img-responsive img-thumbnail"></p>
-					<p class="text-center">
-						<a ng-show="product.web" href="http://www.{{product.web}}" class="btn btn-link">Sitio WEB</a>
-						<a ng-show="product.facebook" href="http://facebook.com/{{product.facebook}}" class="btn btn-link">Facebook</a>
-						<a ng-show="product.twitter" href="http://twitter.com/{{product.twitter}}" class="btn btn-link">Twitter</a>
-					</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md 12">
+				<div class="col-md-9 col-md-push-3">
+					<div class="page-header text-center">
+						<h2>Últimos Comentarios<a type="button" href="#/comments/{{product.Id}}" class="btn btn-primary pull-right">Ver todos</a></h2>
+					</div>
+					<div ng-show="newComment.comment" class="col-md-6">
+						<div class="panel panel-danger">
+							<div class="panel-body panel-fixed-size-lastComment">
+								<p>
+									<div class="star-rating-display-only">
+										<div style="width:{{newComment.stars * 20}}%;"></div>
+									</div> <strong>{{newComment.stars}}</strong>
+								</p>
+								<p class="text-justify"><strong>Comentario:</strong> {{newComment.comment}}</p>
+								<p><strong>Fecha agregado: </strong>{{ newComment.date | date}}</p>
+							</div>
+							<div class="panel-footer">
+								<strong>Agregado por: </strong>{{newComment.addedBy}}
+							</div>
+						</div>
+					</div>
+					<div ng-repeat="comment in product.Comments | orderBy: '-Date'" class="col-md-6">
+						<div class="panel panel-primary">
+							<div class="panel-body panel-fixed-size-lastComment">
+								<p>
+									<div class="star-rating-display-only">
+										<div style="width:{{comment.Stars * 20}}%;"></div>
+									</div> <strong>{{comment.Stars}}</strong>
+								</p>
+								<p class="text-justify"><strong>Comentario:</strong> {{comment.Opinion}}</p>
+								<p><strong>Fecha agregado: </strong>{{comment.Date | date}}</p>
+							</div>
+							<div class="panel-footer">
+								<strong>Agregado por: </strong>{{comment.User.UserName}}
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<p class="text-right"><strong>Agregado por: </strong>{{product.addedBy}}</p>
+				<div class="col-md-3 col-md-pull-9">
+					<div class="panel panel-primary">
+						<div class="panel-heading text-center">
+							<strong>Agregar Comentario</strong>
+						</div>
+						<div class="panel-body">
+							<form name="newCommentForm">
+								<div class="form-group">
+									<label for="starForm">Estrellas <span ng-show="newComment.stars" ng-click="newComment.stars = 0" class="label label-danger"><span class="glyphicon glyphicon-remove"></span></span></label>
+									<div class="text-center">
+										<span class="star-rating">
+											<input type="radio" name="starForm" value="1" ng-model="newComment.stars"><i></i>
+											<input type="radio" name="starForm" value="2" ng-model="newComment.stars"><i></i>
+											<input type="radio" name="starForm" value="3" ng-model="newComment.stars"><i></i>
+											<input type="radio" name="starForm" value="4" ng-model="newComment.stars"><i></i>
+											<input type="radio" name="starForm" value="5" ng-model="newComment.stars"><i></i>
+										</span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="comment">Comentario</label><span class="pull-right color-grey">{{ 140 - newComment.comment.length}}</span>
+									<textarea name="comment" id="comment" rows="4" class="form-control" maxlength="140" ng-model="newComment.comment" required></textarea>
+								</div>
+								<button type="submit" ng-disabled="newCommentForm.$invalid" class="btn btn-block btn-primary" ng-click="addComment()">Agregar Comentario</button>
+								<button type="button" ng-click="limpiarCampos()" class="btn btn-block btn-default">Limpiar Campos</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md 12">
-			<div class="col-md-9 col-md-push-3">
-				<div class="page-header text-center">
-					<h2>Últimos Comentarios<a type="button" href="#/comments/{{product.id}}" class="btn btn-primary pull-right">Ver todos</a></h2>
-				</div>
-				<div ng-show="newComment.comment" class="col-md-6">
-					<div class="panel panel-danger">
-						<div class="panel-body panel-fixed-size-lastComment">
-							<p>
-								<div class="star-rating-display-only">
-									<div style="width:{{newComment.stars * 20}}%;"></div>
-								</div> <strong>{{newComment.stars}}</strong>
-							</p>
-							<p class="text-justify"><strong>Comentario:</strong> {{newComment.comment}}</p>
-							<p><strong>Fecha agregado: </strong>{{ newComment.date | date}}</p>
-						</div>
-						<div class="panel-footer">
-							<strong>Agregado por: </strong>{{newComment.addedBy}}
-						</div>
-					</div>
-				</div>
-				<div ng-repeat="comment in product.lastComments | orderBy: '-date'" class="col-md-6">
-					<div class="panel panel-primary">
-						<div class="panel-body panel-fixed-size-lastComment">
-							<p>
-								<div class="star-rating-display-only">
-									<div style="width:{{comment.stars * 20}}%;"></div>
-								</div> <strong>{{comment.stars}}</strong>
-							</p>
-							<p class="text-justify"><strong>Comentario:</strong> {{comment.comment}}</p>
-							<p><strong>Fecha agregado: </strong>{{comment.date | date}}</p>
-						</div>
-						<div class="panel-footer">
-							<strong>Agregado por: </strong>{{comment.addedBy}}
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-md-pull-9">
-				<div class="panel panel-primary">
-					<div class="panel-heading text-center">
-						<strong>Agregar Comentario</strong>
-					</div>
-					<div class="panel-body">
-						<form name="newCommentForm">
-							<div class="form-group">
-								<label for="starForm">Estrellas <span ng-show="newComment.stars" ng-click="newComment.stars = 0" class="label label-danger"><span class="glyphicon glyphicon-remove"></span></span></label>
-								<div class="text-center">
-									<span class="star-rating">
-										<input type="radio" name="starForm" value="1" ng-model="newComment.stars"><i></i>
-										<input type="radio" name="starForm" value="2" ng-model="newComment.stars"><i></i>
-										<input type="radio" name="starForm" value="3" ng-model="newComment.stars"><i></i>
-										<input type="radio" name="starForm" value="4" ng-model="newComment.stars"><i></i>
-										<input type="radio" name="starForm" value="5" ng-model="newComment.stars"><i></i>
-									</span>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="comment">Comentario</label><span class="pull-right color-grey">{{ 140 - newComment.comment.length}}</span>
-								<textarea name="comment" id="comment" rows="4" class="form-control" maxlength="140" ng-model="newComment.comment" required></textarea>
-							</div>
-							<button type="submit" ng-disabled="newCommentForm.$invalid" class="btn btn-block btn-primary" ng-click="addComment()">Agregar Comentario</button>
-							<button type="button" ng-click="limpiarCampos()" class="btn btn-block btn-default">Limpiar Campos</button>
-						</form>
-					</div>
-				</div>
+</div>
+<div ng-show="error">
+	<div class="container container-margin">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h1 style="text-align:center">{{status}}</h1>
 			</div>
 		</div>
 	</div>
