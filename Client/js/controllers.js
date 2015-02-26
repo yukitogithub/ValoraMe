@@ -281,6 +281,8 @@ valorameControllers.controller('MainController', ['$scope', function($scope) {
 		'comments': 2834147
 	}];
 
+
+	// directamente tomar de una restapi específica para esta página
 	/*
 	$http.get('http://www.axionline.net/labs/valorame/api/lastComments')
 	.success(function (data) {
@@ -498,7 +500,7 @@ valorameControllers.controller('NewProductController',
 			},
 			socials: [
 				{
-					Name : 'Website',
+					Name : 'WWW',
 					Link : 'http://www.' + $scope.new.web
 				},
 				{
@@ -631,7 +633,8 @@ valorameControllers.controller('SearchController',
 	};
 }]);
 
-valorameControllers.controller('CommentsController',['$scope', '$routeParams', function($scope, $routeParams) {
+valorameControllers.controller('CommentsController',
+	['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
 
 	$scope.productId = $routeParams.id;
 
@@ -656,6 +659,30 @@ valorameControllers.controller('CommentsController',['$scope', '$routeParams', f
 	$scope.stars = {};
 	$scope.stars.min = 0;
 	$scope.stars.max = 5;
+
+	$scope.addComment = function() {
+
+		var objetoPost = {
+			'Stars' : $scope.newComment.stars,
+			'Opinion' : $scope.newComment.comment,
+			'Date' : new Date()
+		};
+
+		var headerconfig = {
+			headers: {
+				'Content-Type':'application/json; charset=utf8'
+			}
+		};
+
+		$http.post('http://www.axionline.net/labs/valorame/api/Comments?productid=' + $scope.productId, objetoPost, headerconfig)
+		.success(function(data){
+			// acá agregar al array existente
+			//$scope.product.Comments.push(data);
+			console.log(data);
+		});
+
+		$scope.initComment();
+	};
 
 	//para mayor y menor igual en la búsqueda de estrellas.
 	$scope.greaterThan = function(prop, val){

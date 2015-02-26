@@ -1,5 +1,6 @@
 var valorame = angular.module('valorame',[
 	'ngRoute',
+	'ngAnimate',
 	'valorameControllers',
 	'valorameDirectives'
 	]);

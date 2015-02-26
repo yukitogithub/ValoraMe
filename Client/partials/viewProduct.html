@@ -1,4 +1,4 @@
-<div ng-include="'partials/navbar.html'"></div>
+<!--div ng-include="'partials/navbar.html'"></div-->
 
 <div ng-hide="error">
 	<div class="container container-margin">
@@ -106,6 +106,8 @@
 		<div class="col-md-12">
 			<div class="jumbotron">
 				<h1 style="text-align:center">{{status}}</h1>
+				<h3 style="text-align:center" ng-if="status === 404">cuatrocientoscuatro</h3>
+				<h3 style="text-align:center" ng-if="status === 500">quinientos</h3>
 			</div>
 		</div>
 	</div>
