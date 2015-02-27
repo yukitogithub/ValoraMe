@@ -51,7 +51,7 @@
 							</div>
 						</div>
 					</div>
-					<div ng-repeat="comment in product.Comments | orderBy: '-Date'" class="col-md-6">
+					<div ng-repeat="comment in product.Comments | orderBy: '-Date' | limitTo: 4" class="col-md-6">
 						<div class="panel panel-primary">
 							<div class="panel-body panel-fixed-size-lastComment">
 								<p>
