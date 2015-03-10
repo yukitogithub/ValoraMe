@@ -11,6 +11,7 @@ namespace ValoraMeWS.Models
         public int Stars { get; set; }
         public string Opinion { get; set; }
         public DateTime Date { get; set; }
-        public ApplicationUser User { get; set;}
+        public virtual ApplicationUser User { get; set;}
+        public virtual Product Product { get; set; } //Cambiar en la bd del service!!!
     }
 }

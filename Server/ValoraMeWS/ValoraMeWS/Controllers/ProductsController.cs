@@ -7,8 +7,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+//using System.Web.Http.Routing;
 using System.Web.Http.Description;
+using System.Web.Mvc;
+using System.Web.Mvc.Routing;
 using ValoraMeWS.Models;
+//using System.Web.Routing;
 
 namespace ValoraMeWS.Controllers
 {
@@ -127,6 +131,62 @@ namespace ValoraMeWS.Controllers
             db.SaveChanges();
 
             return Ok(product);
+        }
+
+        //Get comments from the product
+        /*
+            'name' : 'Personal',
+	        'category' : 'Telefonía',
+	        'stars' : 3.2,
+	        'img' : 'https://oceanoneuronal.files.wordpress.com/2012/06/logo_personal_nuevo.jpg',
+	        'comments' : 
+		        [
+                    {
+			            'stars': 4,
+			            'comment' : 'Tiene alcance en mi ciudad, el 3g mas o menos, pero anda para mandar Whatsapps.',
+			            'addedBy' : 'Cosme Fulanito',
+			            'date' : new Date (2015, 0, 04)
+		            },{...}
+	            ]
+         */
+        //[Route("products/{productId:int}/{cantCom:int:range(4,100)}/{index:int?}")]
+        public JsonResult GetProductWithLComments(int productId, int cantCom, int index=0)
+        {
+            Product product = db.Products.Include(x=>x.Comments).FirstOrDefault(x=>x.Id == productId);
+            if(product.Comments != null)
+                product.Comments = product.Comments.OrderByDescending(x => x.Date).ToList().GetRange(index, cantCom);
+            return new JsonResult() { Data = product };
+        }
+
+        //Search for a product
+        /*
+         categorias: [
+            {name: "Electrónicos"},
+            {name: "Servicios de Medicina"},
+            {name: "Restaurants"},
+            {name: "Alimentos"}
+            ],
+        resultados: [
+            {
+            id: 542,
+            name: "Nokia Lumia 710",
+            categoria: "Electrónicos",
+            stars: 3.8
+            },
+            {...}
+            ]
+         */
+        //[Route("products/{productId:int}/{term}/")]
+        public JsonResult SearchProduct(int productId, string term)
+        {
+            List<Product> products = db.Products.Include(x => x.Comments).Where(x => x.Name.Contains(term)).ToList();
+            var resultado = new { categorias = new List<string>, resultados = new List<Product>};
+            foreach (var prod in products)
+            {
+                resultado.categorias.Add(prod.Category.Name);
+                resultado.resultados.Add(prod);
+            }
+            return new JsonResult() { Data = resultado };
         }
 
         protected override void Dispose(bool disposing)

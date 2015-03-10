@@ -207,7 +207,9 @@
     <Compile Include="Controllers\CategoriesLocalController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\CommentsLocalController.cs" />
+    <Compile Include="Controllers\GeneralLocalController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ProductsLocalController.cs" />
     <Compile Include="Controllers\SocialsController.cs" />
