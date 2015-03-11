@@ -1,21 +1,34 @@
-﻿using System;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Data;
+//using System.Data.Entity;
+//using System.Data.Entity.Infrastructure;
+//using System.Linq;
+//using System.Linq.Expressions;
+//using System.Net;
+//using System.Net.Http;
+//using System.Web.Http;
+//using System.Web.Http.Routing;
+//using System.Web.Http.Description;
+//using System.Web.Mvc;
+//using System.Web.Mvc.Routing;
+//using System.Web.Routing;
+using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
-using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
-//using System.Web.Http.Routing;
 using System.Web.Http.Description;
 using System.Web.Mvc;
-using System.Web.Mvc.Routing;
 using ValoraMeWS.Models;
-//using System.Web.Routing;
 
 namespace ValoraMeWS.Controllers
 {
+    [System.Web.Http.RoutePrefix("api/products")]
     public class ProductsController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -149,7 +162,7 @@ namespace ValoraMeWS.Controllers
 		            },{...}
 	            ]
          */
-        //[Route("products/{productId:int}/{cantCom:int:range(4,100)}/{index:int?}")]
+        [System.Web.Http.Route("products/{productId:int}/{cantCom:int:range(4,100)}/{index:int?}")]
         public JsonResult GetProductWithLComments(int productId, int cantCom, int index=0)
         {
             Product product = db.Products.Include(x=>x.Comments).FirstOrDefault(x=>x.Id == productId);
@@ -176,7 +189,7 @@ namespace ValoraMeWS.Controllers
             {...}
             ]
          */
-        //[Route("products/{productId:int}/{term}/")]
+        [System.Web.Http.Route("products/{productId:int}/{term}/")]
         public JsonResult SearchProduct(int productId, string term)
         {
             List<Product> products = db.Products.Include(x => x.Comments).Where(x => x.Name.Contains(term)).ToList();
