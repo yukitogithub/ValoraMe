@@ -1,8 +1,15 @@
 var main = angular.module('main',[]);
 
-main.controller('MainController', ['$scope', function($scope) {
+main.controller('MainController', ['$scope', '$http', function($scope, $http) {
 
-	$scope.bestProducts = [{
+	$http.get('http://www.axionline.net/labs/valorame/api/main')
+	.success(function (data) {
+		$scope.bestProducts = data.Data.bestProducts;
+		$scope.worstProducts = data.Data.worstProducts;
+		$scope.lastComments = data.Data.recentComments;
+	});
+
+	/*$scope.bestProducts = [{
 		'id': 147,
 		'name': 'Personal',
 		'avg': 4.2,
@@ -63,7 +70,7 @@ main.controller('MainController', ['$scope', function($scope) {
 		'avg': 1.5,
 		'comments': 2834147
 	}];
-
+*/
 
 	// directamente tomar de una restapi específica para esta página
 	/*
@@ -73,7 +80,7 @@ main.controller('MainController', ['$scope', function($scope) {
 	});
 	*/
 
-	$scope.lastComments = [{
+/*	$scope.lastComments = [{
 		'votated': 'Personal',
 		'votatedId' : 234,
 		'comment': 'La verdad que estoy muy disconforme con la compañía. Deja mucho que desear. Sobretodo la conexión!!!',
@@ -121,6 +128,6 @@ main.controller('MainController', ['$scope', function($scope) {
 	 	'date': new Date(2015,0,10),
 	 	'comentator': 'Pepsi co'
 	}
-	];
+	];*/
 
 }]);

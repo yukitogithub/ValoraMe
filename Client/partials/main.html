@@ -11,7 +11,7 @@
 					<div style="width:{{item.avg * 20}}%">
 					</div>
 					<div class="star-rating-text">
-						<h2 class="star">{{item.avg}}</h2>
+						<h2 class="star">{{item.avg | number:1}}</h2>
 						<h3 class="star"><a href="#/view/{{item.id}}"><span class="label label-warning star">{{item.name}}</span></a></h3>
 						<p class="star"><span class="glyphicon glyphicon-user"></span> {{item.comments}}</p>
 					</div>
@@ -30,7 +30,7 @@
 					<div style="width:{{item.avg * 20}}%">
 					</div>
 					<div class="star-rating-text">
-						<h2 class="star">{{item.avg}}</h2>
+						<h2 class="star">{{item.avg | number:1}}</h2>
 						<h3 class="star"><a href="#/view/{{item.id}}"><span class="label label-default star">{{item.name}}</span></a></h3>
 						<p class="star"><span class="glyphicon glyphicon-user"></span> {{item.comments}}</p>
 					</div>
@@ -45,14 +45,14 @@
 	</div>
 		<div ng-repeat="item in lastComments | orderBy:'-date'" class="col-md-6">
 			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<a class="nocolor-alink" href="#/view/{{item.votatedId}}"><h3 class="panel-title"><strong>Product/Service: </strong>{{item.votated}}</h3></a>
+				<div class="panel-heading text-center">
+					<a class="nocolor-alink" href="#/view/{{item.votatedId}}"><h3 class="panel-title"><strong></strong>{{item.votated}}</h3></a>
 				</div>
 				<div class="panel-body panel-fixed-size-mainComment">
 					<p>
 						<div class="star-rating-display-only">
 							<div style="width:{{item.stars * 20}}%;"></div>
-						</div> <strong>{{item.stars}}</strong>
+						</div> <strong>{{item.stars | number:1}}</strong>
 					</p>
 					<p class="text-justify"><strong>Comment: </strong>{{item.comment}}</p>
 				</div>

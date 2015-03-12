@@ -1,9 +1,14 @@
 var search = angular.module('search',[]);
 
 search.controller('SearchController',
-	['$scope', '$routeParams', function($scope, $routeParams) {
+	['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
 	
 	$scope.busqueda = $routeParams.query;
+
+	$http.get('http://www.axionline.net/labs/valorame/api/products/search/' + $scope.busqueda)
+	.success(function (data) {
+		$scope.data = data.Data;
+	});
 
 	//inicialización del orden del filtro
 	$scope.selectOrder = "name";

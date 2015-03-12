@@ -7,11 +7,11 @@ product.controller('ProductController',
 
 	$scope.productId = $routeParams.id;
 
-	$http.get('http://www.axionline.net/labs/valorame/api/products/' + $scope.productId)
+	$http.get('http://www.axionline.net/labs/valorame/api/products/' + $scope.productId + '/6')
 	.success(function (data){
 
 		$scope.error = false;
-		$scope.product = data;
+		$scope.product = data.Data;
 
 	})
 	.error(function (data, status) {

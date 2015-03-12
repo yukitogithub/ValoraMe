@@ -7,11 +7,13 @@ comments.controller('CommentsController',
 
 	$scope.productId = $routeParams.id;
 
-	$http.get('http://www.axionline.net/labs/valorame/api/products/' + $scope.productId)
+	$scope.indice = 0;
+
+	$http.get('http://www.axionline.net/labs/valorame/api/products/' + $scope.productId+'/20/'+$scope.indice)
 	.success(function (data){
 
 		$scope.error = false;
-		$scope.product = data;
+		$scope.product = data.Data;
 
 	})
 	.error(function (data, status) {
