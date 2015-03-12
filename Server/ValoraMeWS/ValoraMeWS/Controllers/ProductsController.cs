@@ -191,16 +191,28 @@ namespace ValoraMeWS.Controllers
             {...}
             ]
          */
+        //TODO: Modificar el formato del resultado!!!
         [System.Web.Http.Route("search/{term}")]
         [System.Web.Http.HttpGet]
         public JsonResult SearchProduct(string term)
         {
             List<Product> products = db.Products.Include(x => x.Comments).Where(x => x.Name.Contains(term)).ToList();
-            var resultado = new { categorias = new List<string>(), resultados = new List<Product>()};
+            var resultado = new { categorias = new List<object>(), resultados = new List<object>()};
             foreach (var prod in products)
             {
-                resultado.categorias.Add(prod.Category.Name);
-                resultado.resultados.Add(prod);
+                object cat = new { name = prod.Category.Name };
+                if (!resultado.categorias.Exists(x => x.Equals(cat)))
+                { 
+                    resultado.categorias.Add(new { name = prod.Category.Name });
+                }
+                resultado.resultados.Add(
+                    new {
+                            id = prod.Id,
+                            name = prod.Name,
+                            categoria = prod.Category.Name,
+                            stars = prod.Stars
+                        }
+                    );
             }
             return new JsonResult() { Data = resultado };
         }
