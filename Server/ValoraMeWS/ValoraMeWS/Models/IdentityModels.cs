@@ -21,7 +21,7 @@ namespace ValoraMeWS.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("ValorameConnection", throwIfV1Schema: false)
+            : base("ValorameConnection")//, throwIfV1Schema: false)
         {
             this.Configuration.LazyLoadingEnabled = true;
         }

@@ -210,7 +210,6 @@
     <Compile Include="Controllers\CategoriesLocalController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\CommentsLocalController.cs" />
-    <Compile Include="Controllers\GeneralLocalController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -337,7 +336,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>14869</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

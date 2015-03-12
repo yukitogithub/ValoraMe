@@ -162,12 +162,14 @@ namespace ValoraMeWS.Controllers
 		            },{...}
 	            ]
          */
-        [System.Web.Http.Route("products/{productId:int}/{cantCom:int:range(4,100)}/{index:int?}")]
+        [System.Web.Http.Route("{productId:int}/{cantCom:int:range(4,100)}/{index:int?}")]
         public JsonResult GetProductWithLComments(int productId, int cantCom, int index=0)
         {
             Product product = db.Products.Include(x=>x.Comments).FirstOrDefault(x=>x.Id == productId);
-            if(product.Comments != null)
+            if(product.Comments != null && ((index + cantCom) <= product.Comments.Count))
                 product.Comments = product.Comments.OrderByDescending(x => x.Date).ToList().GetRange(index, cantCom);
+            else
+                product.Comments = product.Comments.OrderByDescending(x => x.Date).ToList().GetRange(index, (product.Comments.Count - index));
             return new JsonResult() { Data = product };
         }
 
@@ -189,11 +191,12 @@ namespace ValoraMeWS.Controllers
             {...}
             ]
          */
-        [System.Web.Http.Route("products/{productId:int}/{term}/")]
-        public JsonResult SearchProduct(int productId, string term)
+        [System.Web.Http.Route("search/{term}")]
+        [System.Web.Http.HttpGet]
+        public JsonResult SearchProduct(string term)
         {
             List<Product> products = db.Products.Include(x => x.Comments).Where(x => x.Name.Contains(term)).ToList();
-            var resultado = new { categorias = new List<string>, resultados = new List<Product>};
+            var resultado = new { categorias = new List<string>(), resultados = new List<Product>()};
             foreach (var prod in products)
             {
                 resultado.categorias.Add(prod.Category.Name);
