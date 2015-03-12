@@ -18,7 +18,7 @@ search.controller('SearchController',
 	$scope.stars.min = 0;
 	$scope.stars.max = 5;
 
-	$scope.data = {
+	/*$scope.data = {
 		categorias: [
 				{name: "Electrónicos"},
 				{name: "Servicios de Medicina"},
@@ -87,7 +87,7 @@ search.controller('SearchController',
 				stars: 4.5
 			}
 		]
-	};
+	};*/
 
 	//para mayor y menor igual en la búsqueda de estrellas.
 	$scope.greaterThan = function(prop, val){
